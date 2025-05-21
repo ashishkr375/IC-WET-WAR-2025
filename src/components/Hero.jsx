@@ -8,7 +8,7 @@ const navLinks = [
   { href: '/people', label: 'Key People' },
   { href: '/register', label: 'Registration' },
   { href: '/sponsors', label: 'Sponsors' },
-  { href: '/contact-us', label: 'contact-us Us' },
+  { href: '/contact-us', label: 'Contac Us' },
 ];
 
 const Hero = () => {
@@ -126,14 +126,11 @@ const Hero = () => {
           <div
             className="font-extrabold uppercase"
             style={{
-              fontSize: 'clamp(1.7rem, 8vw, 3.5rem)', 
-              letterSpacing: '4px',
-              marginBottom: '1.2rem',
-              background: 'linear-gradient(90deg,rgb(150, 196, 241) 30%, #64b5f6 70%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              WebkitTextStroke: '2px #1976d2',
-              textStroke: '2px #1976d2',
+              fontSize: 'clamp(1.2rem, 5vw, 2.2rem)', 
+              marginBottom: '1rem',
+              color: '#fff',
+              letterSpacing: '2px',
+              textShadow: '0 2px 12px #1976d2, 0 1px 2px #fff',
             }}
           >
             International Conference On
@@ -141,11 +138,14 @@ const Hero = () => {
           <div
             className="font-semibold"
             style={{
-              fontSize: 'clamp(1.2rem, 5vw, 2.2rem)', 
-              marginBottom: '1rem',
-              color: '#fff',
-              letterSpacing: '2px',
-              textShadow: '0 2px 12px #1976d2, 0 1px 2px #fff',
+              fontSize: 'clamp(2.4rem, 10vw, 4rem)', 
+              letterSpacing: '4px',
+              marginBottom: '1.2rem',
+              background: 'linear-gradient(90deg,rgb(30, 137, 238) 30%,rgb(114, 181, 236) 70%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              WebkitTextStroke: '2px #1976d2',
+              textStroke: '2px #1976d2',
             }}
           >
             Wetland and Water System for Sustainable Development
@@ -175,6 +175,41 @@ const Hero = () => {
             }}
           >
             (29-31 December 2025)
+          </div>
+          {/* Logos and collaboration text below the date */}
+          <div className="flex flex-col items-center gap-2 mt-6">
+            <div className="flex items-center gap-4 justify-center">
+              <Image
+                src="/logo.png"
+                alt="NIT Patna Logo"
+                width={64}
+                height={64}
+                className="rounded-md shadow bg-white/80 p-2"
+                style={{ background: "#fff", borderRadius: "12px" }}
+              />
+              <span
+                style={{
+                  fontWeight: 600,
+                  color: "#fff",
+                  fontSize: "1.1rem",
+                  letterSpacing: "1px",
+                  textShadow: "0 1px 8px #1976d2",
+                  background: "rgba(30,137,238,0.15)",
+                  borderRadius: "8px",
+                  padding: "0.5rem 1rem"
+                }}
+              >
+                In Collaboration With
+              </span>
+              <Image
+                src="/logo2.png"
+                alt="BIT Mesra Logo"
+                width={64}
+                height={64}
+                className="rounded-md shadow bg-white/80 p-2"
+                style={{ background: "#fff", borderRadius: "12px" }}
+              />
+            </div>
           </div>
         </div>
       </div>
