@@ -51,7 +51,7 @@ const Navbar = () => {
           />
           <span className="text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase text-[#0D47A1
 ] font-sans">
-            ICWWRSD-2025
+            WET-WAR
           </span>
         </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
               <li key={link.label} className="relative flex items-stretch">
                 <button
                   type="button"
-                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all"
+                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all cursor-pointer"
                   style={{
                     minWidth: '90px',
                     textAlign: 'center',
@@ -87,7 +87,7 @@ const Navbar = () => {
                       <li key={item.href}>
                         <Link
                           href={item.href}
-                          className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition"
+                          className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition cursor-pointer"
                           onMouseDown={e => e.preventDefault()}
                           onClick={() => setOpenDropdown(null)}
                         >
@@ -102,7 +102,7 @@ const Navbar = () => {
               <li key={link.href} className="flex items-stretch">
                 <Link
                   href={link.href}
-                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
+                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left cursor-pointer"
                   style={{
                     minWidth: '90px',
                     textAlign: 'center',
@@ -148,7 +148,7 @@ const Navbar = () => {
                 <li key={link.label} className="w-full text-center">
                   <button
                     type="button"
-                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative"
+                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative cursor-pointer"
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                   >
                     {link.label}
@@ -162,7 +162,7 @@ const Navbar = () => {
                         <li key={item.href}>
                           <Link
                             href={item.href}
-                            className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition"
+                            className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition cursor-pointer"
                             onMouseDown={e => e.preventDefault()}
                             onClick={() => {
                               setNavOpen(false);
@@ -180,7 +180,7 @@ const Navbar = () => {
                 <li key={link.href} className="w-full text-center">
                   <Link
                     href={link.href}
-                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative after:content-[''] after:absolute after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:w-2/3 after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
+                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative after:content-[''] after:absolute after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:w-2/3 after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left cursor-pointer"
                     onClick={() => setNavOpen(false)}
                   >
                     {link.label}
