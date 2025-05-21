@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,21 +12,23 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-[#90caf9] mb-4">Social Media</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="https://twitter.com/nitpatna" target="_blank" rel="noopener noreferrer" className="hover:text-[#64b5f6] transition">
-                Twitter: @nitpatna
+              <a href="https://twitter.com/nitpatna" target="_blank" rel="noopener noreferrer" className="hover:text-[#64b5f6] transition flex items-center gap-2">
+                <FaTwitter className="inline-block text-lg" />
+                @nitpatna
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/nitpatnaofficial" target="_blank" rel="noopener noreferrer" className="hover:text-[#64b5f6] transition">
-                Facebook: /nitpatnaofficial
+              <a href="https://www.facebook.com/nitpatnaofficial" target="_blank" rel="noopener noreferrer" className="hover:text-[#64b5f6] transition flex items-center gap-2">
+                <FaFacebook className="inline-block text-lg" />
+                /nitpatnaofficial
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/school/national-institute-of-technology-patna/" target="_blank" rel="noopener noreferrer" className="hover:text-[#64b5f6] transition">
-                LinkedIn: NIT Patna
+              <a href="https://www.linkedin.com/school/national-institute-of-technology-patna/" target="_blank" rel="noopener noreferrer" className="hover:text-[#64b5f6] transition flex items-center gap-2">
+                <FaLinkedin className="inline-block text-lg" />
+                NIT Patna
               </a>
             </li>
-            {/* Add more handles as needed */}
           </ul>
         </div>
 
