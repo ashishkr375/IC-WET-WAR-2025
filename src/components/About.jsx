@@ -8,13 +8,13 @@ const About = () => (
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'linear-gradient(135deg, #b3e0fc 0%, #5ac8fa 100%)',
+      background: 'linear-gradient(135deg,#5ac8fa  0%, #b3e0fc 100%)',
       padding: '4rem 1rem',
     }}
   >
     <div
       style={{
-        background: 'rgba(90, 200, 250, 0.93)',
+        background: 'rgba(208, 238, 241, 0.93)',
         borderRadius: '1.5rem',
         boxShadow: '0 8px 32px rgba(90, 200, 250, 0.18)',
         maxWidth: 800,

@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -10,7 +11,7 @@ const navLinks = [
     dropdown: [
       { href: '/advisory-committee', label: 'Advisory Committee' },
       { href: '/organizing-committee', label: 'Organizing Committee' },
-      { href: '/program-committee', label: 'Program Committee' },
+      { href: '/technical-committee', label: 'Technical Committee' },
     ],
   },
   { href: '/register', label: 'Registration' },
@@ -50,7 +51,7 @@ const Navbar = () => {
           />
           <span className="text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase text-[#0D47A1
 ] font-sans">
-            ICWW
+            ICWWRSD-2025
           </span>
         </div>
 
@@ -61,7 +62,7 @@ const Navbar = () => {
               <li key={link.label} className="relative flex items-stretch">
                 <button
                   type="button"
-                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-[#0a192f] font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all"
+                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all"
                   style={{
                     minWidth: '90px',
                     textAlign: 'center',
@@ -84,12 +85,14 @@ const Navbar = () => {
                   >
                     {link.dropdown.map((item) => (
                       <li key={item.href}>
-                        <a
+                        <Link
                           href={item.href}
-                          className="block px-4 py-2 text-[#0a192f] hover:bg-[#bbdefb] hover:text-[#1976d2] rounded transition"
+                          className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition"
+                          onMouseDown={e => e.preventDefault()}
+                          onClick={() => setOpenDropdown(null)}
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -97,16 +100,16 @@ const Navbar = () => {
               </li>
             ) : (
               <li key={link.href} className="flex items-stretch">
-                <a
+                <Link
                   href={link.href}
-                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-[#0a192f] font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
+                  className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition-all after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
                   style={{
                     minWidth: '90px',
                     textAlign: 'center',
                   }}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             )
           )}
@@ -145,7 +148,7 @@ const Navbar = () => {
                 <li key={link.label} className="w-full text-center">
                   <button
                     type="button"
-                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-[#0a192f] font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative"
+                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative"
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                   >
                     {link.label}
@@ -154,16 +157,20 @@ const Navbar = () => {
                     </svg>
                   </button>
                   {openDropdown === link.label && (
-                    <ul className="mt-2 w-full bg-white rounded-lg shadow-lg border border-[#b3e0fc] z-50">
+                    <ul className="mt-2 w-full bg-[#e3f2fd] rounded-lg shadow-lg border border-[#b3e0fc] z-50">
                       {link.dropdown.map((item) => (
                         <li key={item.href}>
-                          <a
+                          <Link
                             href={item.href}
-                            className="block px-4 py-2 text-[#0a192f] hover:bg-[#e3f2fd] hover:text-[#1976d2] rounded transition"
-                            onClick={() => setNavOpen(false)}
+                            className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition"
+                            onMouseDown={e => e.preventDefault()}
+                            onClick={() => {
+                              setNavOpen(false);
+                              setOpenDropdown(null);
+                            }}
                           >
                             {item.label}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -171,13 +178,13 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li key={link.href} className="w-full text-center">
-                  <a
+                  <Link
                     href={link.href}
-                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-[#0a192f] font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative after:content-[''] after:absolute after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:w-2/3 after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
+                    className="block py-2 px-4 w-full rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 hover:text-white transition relative after:content-[''] after:absolute after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:w-2/3 after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
                     onClick={() => setNavOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               )
             )}

@@ -72,31 +72,28 @@ const Hero = () => {
             International Conference On
           </div>
           <div
-            className="font-semibold"
+            className="font-extrabold uppercase"
             style={{
               fontSize: 'clamp(1.9rem, 9vw, 3.2rem)', 
               letterSpacing: '6px',
               marginBottom: '0.2rem',
-              background: 'linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)',
+              background: 'linear-gradient(90deg,rgb(0, 157, 255) 0%, #0072ff 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              WebkitTextStroke: '3px #1976d2',
-              textStroke: '3px #1976d2',
+              WebkitTextStroke: '4px #1976d2',
+              textStroke: '4px #1976d2',
             }}
           >
-            Wetland and Water System for Resource Sustainable Development
+            Wetland and Water  Resource  For Sustainable Development
           </div>
           <div
-            className="font-extrabold uppercase"
+            className="font-semibold"
             style={{
-              fontSize: 'clamp(1.5rem, 7vw, 2.8rem)', 
-              letterSpacing: '6px',
-              marginBottom: '0.2rem',
-              background: 'linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              WebkitTextStroke: '2px #1976d2',
-              textStroke: '2px #1976d2',
+              fontSize: 'clamp(1.2rem, 5vw, 2.2rem)', 
+              marginBottom: '1rem',
+              color: '#fff',
+              letterSpacing: '2px',
+              textShadow: '0 2px 12px #1976d2, 0 1px 2px #fff',
             }}
           >
             WET-WAR 2025(International)
@@ -118,7 +115,7 @@ const Hero = () => {
             {/* NITP logo and name */}
             <div className="flex items-center gap-3 justify-center mb-2">
               <Image
-                src="/nitplogo.png"
+                src="https://www.nitp.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.00e5159e.png&w=256&q=75"
                 alt="NIT Patna Logo"
                 width={90}
                 height={90}
