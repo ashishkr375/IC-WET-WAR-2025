@@ -14,7 +14,7 @@ const About = () => (
   >
     <div
       style={{
-        background: 'rgba(208, 238, 241, 0.93)',
+        background: 'rgba(111, 226, 236, 0.93)',
         borderRadius: '1.5rem',
         boxShadow: '0 8px 32px rgba(90, 200, 250, 0.18)',
         maxWidth: 800,

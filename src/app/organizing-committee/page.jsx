@@ -89,24 +89,28 @@ export default function OrganizingCommitteePage() {
           </h1>
           <div className="flex flex-wrap justify-center">
             {people.map((person, idx) => (
-              <div key={idx} className="w-[300px] h-[325px] mx-4 my-4">
-                <div className="py-8 pb-10 mb-8 bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] text-center overflow-hidden relative rounded-[20px] group h-full border border-[#4fc3f7] shadow-lg">
-                  <div className="inline-block h-[130px] w-[130px] mb-12 z-[1] relative">
-                    <div className="absolute w-full h-0 rounded-full bg-[#4fc3f7] bottom-[135%] right-0 left-0 opacity-80 scale-[3] transition-all duration-300 group-hover:h-full"></div>
-                    <div className="absolute w-full h-full rounded-full bg-[#b3e0fc] top-0 left-0 -z-[1]"></div>
+              <div
+                key={idx}
+                className="w-[290px] h-[340px] mx-3 my-4"
+              >
+                <div className="relative flex flex-col items-center bg-gradient-to-br from-[#e3f2fd] via-[#b3e0fc] to-[#4fc3f7] border-2 border-[#0288d1] rounded-2xl shadow-xl h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                  <div className="relative mt-6 mb-4 flex items-center justify-center">
+                    {/* White circle border with sky blue on hover */}
+                    <div className="absolute w-[110px] h-[110px] rounded-full border-4 border-white transition-all duration-300 group-hover:w-[130px] group-hover:h-[130px] group-hover:border-[#0288d1] z-0"></div>
                     <Image
                       src={person.image || "/faculty.jpeg"}
                       alt={person.name}
-                      width={130}
-                      height={130}
-                      className="w-[130px] h-[130px] object-cover rounded-full transform scale-100 transition-all duration-900 ease-in-out group-hover:shadow-[0_0_0_14px_#b3e0fc] group-hover:scale-[0.7]"
+                      width={110}
+                      height={110}
+                      className="w-[110px] h-[110px] object-cover rounded-full border-4 border-transparent shadow-lg z-10 transition-all duration-300 group-hover:w-[130px] group-hover:h-[130px]"
                     />
                   </div>
-                  <div className="px-4">
-                    <h3 className="text-md text-[#0277bd] font-bold">{person.name}</h3>
-                    <h4 className="block text-[15px] text-[#0288d1] capitalize">{person.role}</h4>
-                    <h4 className="block text-[15px] text-[#174366] capitalize">{person.detail}</h4>
+                  <div className="flex-1 flex flex-col items-center justify-center px-4">
+                    <h3 className="text-lg text-[#0277bd] font-bold mb-1 drop-shadow">{person.name}</h3>
+                    <h4 className="text-base text-[#fff] bg-[#0288d1] px-3 py-1 rounded-full font-semibold mb-1 shadow">{person.role}</h4>
+                    <h4 className="text-[15px] text-[#174366] capitalize">{person.detail}</h4>
                   </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#0288d1]/60 via-[#4fc3f7]/40 to-[#b3e0fc]/0 rounded-b-2xl"></div>
                 </div>
               </div>
             ))}

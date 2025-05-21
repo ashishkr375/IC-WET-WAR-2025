@@ -33,6 +33,41 @@ const accountDetails = [
   { label: "IFSC Code", value: "IDIB000B810" }
 ];
 
+const paperInfoPoints = [
+  {
+    color: "bg-blue-500",
+    text: "The conference proceedings as well as selected high quality research papers would be published in SCOPUS/SCIE Journal."
+  },
+  {
+    color: "bg-blue-400",
+    text: "The Best paper prize and certificate would be given in each session of the conference."
+  },
+  {
+    color: "bg-blue-300",
+    text: "The overall best presentation would be considered for award."
+  },
+  {
+    color: "bg-blue-400",
+    text: "The conference breakfast, lunch, dinner, tea and GST (18%) is included in the registration fee of the students, faculties, officers and sponsor."
+  },
+  {
+    color: "bg-blue-300",
+    text: "A cultural program with international competition among participants (Students/Officers) is arranged every day prior to the dinner. Therefore, the participants /experts’/ invitees/ sponsors can show their talent in cultural programs and win the attractive prizes."
+  },
+  {
+    color: "bg-blue-200",
+    text: "We have limited seats in boys and girl hostels. Therefore, first come first serve basis would be considered. However, there are many budget hotels near NIT Patna."
+  },
+  {
+    color: "bg-blue-400",
+    text: "About 500+ participation is expected. It is going to be one of the biggest Water Expert assemblies at NIT Patna. This is an opportunity of interaction and knowledge sharing."
+  },
+  {
+    color: "bg-blue-200",
+    text: "About 100 participants are expected from different parts of the globe. All international students/officers/faculties are requested to take prior approval before coming to India."
+  }
+];
+
 export default function RegisterPage() {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -151,26 +186,24 @@ export default function RegisterPage() {
           </section>
 
           {/* Paper Info Section */}
-          <section
-            style={{
-              background: "rgba(90,200,250,0.10)",
-              border: "1.5px solid #4fc3f7",
-              color: "#0d223a",
-            }}
-            className="rounded-2xl p-6 space-y-4 shadow-lg"
-          >
-            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
-              <li>
-                All selected Papers will be published in Conference proceedings.
+          <ul className="space-y-4">
+            {paperInfoPoints.map((point, idx) => (
+              <li className="flex" key={idx}>
+                <div className={`w-1 ${point.color} rounded-l-full`} />
+                <div
+                  className="shadow-md px-4 py-2 rounded-r-xl flex-1"
+                  style={{
+                    background:"#4682B4",
+                  }}
+                >
+                  <p className="text-sm md:text-base text-white">
+                    {point.text}
+                  </p>
+                </div>
               </li>
-              <li>
-                High-quality papers presented in the conference may be published in Indexed Journals after peer review.
-              </li>
-              <li>
-                Best Paper Awards will be given in each theme for Oral and Poster presentations in every session.
-              </li>
-            </ul>
-          </section>
+            ))}
+          </ul>
+
         </div>
       </div>
       <Footer />

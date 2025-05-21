@@ -26,7 +26,7 @@ const Notices = () => (
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'linear-gradient(135deg, #b3e0fc 0%, #5ac8fa 100%)', // sky blue gradient
+      background: 'linear-gradient(135deg,#5ac8fa  0%, #b3e0fc 100%)',
       padding: '4rem 1rem',
     }}
     className="w-full"
