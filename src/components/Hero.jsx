@@ -26,7 +26,8 @@ const Hero = () => {
             height={40}
             className="rounded-md mr-3 sm:mr-4 "
           />
-          <span className="text-lg sm:text-2xl font-bold text-blue-100 tracking-widest drop-shadow uppercase font-sans">
+          <span className="text-lg sm:text-2xl font-bold text-blue-100 tracking-widest drop-shadow upper
+          case font-sans">
             ICWW
           </span>
         </div>
@@ -120,32 +121,17 @@ const Hero = () => {
         }}
       >
         <div
-          style={{
-            color: '#1a237e',
-            fontSize: '3.5rem',
-            fontWeight: 700,
-            textShadow: '0 6px 32px rgba(21,101,192,0.18), 0 2px 8px #fff',
-            pointerEvents: 'auto',
-            textAlign: 'center',
-            lineHeight: 1.2,
-            width: '100%',
-            maxWidth: 1100,
-            padding: '0',
-            borderRadius: '0',
-            boxShadow: 'none',
-            background: 'none',
-          }}
+          className="w-full max-w-[1100px] text-center pointer-events-auto"
         >
           <div
+            className="font-extrabold uppercase"
             style={{
-              fontSize: 'clamp(1.3rem, 6vw, 3.5rem)',
-              fontWeight: 800,
+              fontSize: 'clamp(1.7rem, 8vw, 3.5rem)', 
               letterSpacing: '4px',
               marginBottom: '1.2rem',
               background: 'linear-gradient(90deg, #1976d2 30%, #64b5f6 70%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              textTransform: 'uppercase',
               WebkitTextStroke: '2px #1976d2',
               textStroke: '2px #1976d2',
             }}
@@ -153,9 +139,9 @@ const Hero = () => {
             International Conference On
           </div>
           <div
+            className="font-semibold"
             style={{
-              fontSize: 'clamp(1rem, 4vw, 2.2rem)',
-              fontWeight: 600,
+              fontSize: 'clamp(1.2rem, 5vw, 2.2rem)', 
               marginBottom: '1rem',
               color: '#fff',
               letterSpacing: '2px',
@@ -165,15 +151,14 @@ const Hero = () => {
             Wetland and Water System for Sustainable Development
           </div>
           <div
+            className="font-extrabold uppercase"
             style={{
-              fontSize: 'clamp(1.2rem, 5vw, 2.8rem)',
-              fontWeight: 800,
+              fontSize: 'clamp(1.5rem, 7vw, 2.8rem)', 
               letterSpacing: '6px',
               marginBottom: '1rem',
               background: 'linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              textTransform: 'uppercase',
               WebkitTextStroke: '2px #1976d2',
               textStroke: '2px #1976d2',
             }}
@@ -181,9 +166,9 @@ const Hero = () => {
             WET-WAR 2025
           </div>
           <div
+            className="font-medium"
             style={{
-              fontSize: 'clamp(0.9rem, 3vw, 1.7rem)',
-              fontWeight: 500,
+              fontSize: 'clamp(1.1rem, 4vw, 1.7rem)', 
               color: '#e3f2fd',
               letterSpacing: '2px',
               textShadow: '0 1px 8px #1976d2',
