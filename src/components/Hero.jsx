@@ -155,7 +155,7 @@ const Hero = () => {
             style={{
               fontSize: 'clamp(1.5rem, 7vw, 2.8rem)', 
               letterSpacing: '6px',
-              marginBottom: '1rem',
+              marginBottom: '0.2rem',
               background: 'linear-gradient(90deg, #00c6ff 0%, #0072ff 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -164,6 +164,18 @@ const Hero = () => {
             }}
           >
             WET-WAR 2025
+          </div>
+          <div
+            style={{
+              fontSize: 'clamp(1rem, 3vw, 1.3rem)',
+              color: '#e3f2fd',
+              letterSpacing: '2px',
+              textShadow: '0 2px 12px #1976d2, 0 1px 2px #fff',
+              marginBottom: '1rem',
+              textTransform: 'lowercase',
+            }}
+          >
+            (international)
           </div>
           <div
             className="font-medium"
@@ -178,37 +190,93 @@ const Hero = () => {
           </div>
           {/* Logos and collaboration text below the date */}
           <div className="flex flex-col items-center gap-2 mt-6">
-            <div className="flex items-center gap-4 justify-center">
+            {/* NITP logo and name */}
+            <div className="flex items-center gap-3 justify-center mb-2">
               <Image
-                src="/logo.png"
+                src="/nitplogo.png"
                 alt="NIT Patna Logo"
-                width={64}
-                height={64}
-                className="rounded-md shadow bg-white/80 p-2"
-                style={{ background: "#fff", borderRadius: "12px" }}
+                width={56}
+                height={56}
+                className="rounded-md shadow  p-2"
+                style={{  borderRadius: "12px" }}
               />
               <span
                 style={{
-                  fontWeight: 600,
+                  fontWeight: 700,
                   color: "#fff",
-                  fontSize: "1.1rem",
+                  fontSize: "1.15rem",
                   letterSpacing: "1px",
                   textShadow: "0 1px 8px #1976d2",
                   background: "rgba(30,137,238,0.15)",
                   borderRadius: "8px",
-                  padding: "0.5rem 1rem"
+                  padding: "0.5rem 1.2rem"
                 }}
               >
-                In Collaboration With
+                National Institute of Technology,Patna
               </span>
-              <Image
-                src="/logo2.png"
-                alt="BIT Mesra Logo"
-                width={64}
-                height={64}
-                className="rounded-md shadow bg-white/80 p-2"
-                style={{ background: "#fff", borderRadius: "12px" }}
-              />
+            </div>
+            {/* Collaboration text and logos */}
+            <div className="flex flex-col items-center gap-2">
+              <span
+                style={{
+                  fontWeight: 600,
+                  color: "#fff",
+                  fontSize: "1.05rem",
+                  letterSpacing: "1px",
+                  textShadow: "0 1px 8px #1976d2",
+                  background: "rgba(30,137,238,0.10)",
+                  borderRadius: "8px",
+                  padding: "0.35rem 1rem"
+                }}
+              >
+                In Technical Collaboration with
+              </span>
+              <div className="flex items-center gap-5 justify-center mt-1">
+                {/* BIT Mesra */}
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/bitmlogo.png"
+                    alt="BIT Mesra Logo"
+                    width={48}
+                    height={48}
+                    className="rounded-md shadow  p-1"
+                    style={{  borderRadius: "10px" }}
+                  />
+                  <span
+                    style={{
+                      fontWeight: 600,
+                      color: "#fff",
+                      fontSize: "1rem",
+                      letterSpacing: "0.5px",
+                      textShadow: "0 1px 8px #1976d2",
+                    }}
+                  >
+                    Birla Institute of Technology, Mesra
+                  </span>
+                </div>
+                {/* Bihar State Wetland Authority */}
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/BSWA.png"
+                    alt="Bihar State Wetland Authority Logo"
+                    width={48}
+                    height={48}
+                    className="rounded-md shadow  p-1"
+                    style={{ borderRadius: "10px" }}
+                  />
+                  <span
+                    style={{
+                      fontWeight: 600,
+                      color: "#fff",
+                      fontSize: "1rem",
+                      letterSpacing: "0.5px",
+                      textShadow: "0 1px 8px #1976d2",
+                    }}
+                  >
+                    Bihar State Wetland Authority
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
