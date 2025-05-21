@@ -31,7 +31,7 @@ const Notices = () => (
     }}
     className="w-full"
   >
-    <h2 className="text-[#64b5f6] font-bold text-3xl mb-8 text-center tracking-widest uppercase drop-shadow-[0_2px_12px_#1976d2]">
+    <h2 className="text-[#64b5f6] font-bold text-4xl mb-8 text-center tracking-widest uppercase drop-shadow-[0_2px_12px_#1976d2]">
       Notification
     </h2>
     <div className="flex flex-wrap gap-6 justify-center w-full max-w-screen-xl">

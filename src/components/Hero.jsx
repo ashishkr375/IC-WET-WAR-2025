@@ -6,9 +6,9 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/author', label: 'Author Section' },
   { href: '/people', label: 'Key People' },
-  { href: '/pay', label: 'Registration' },
+  { href: '/register', label: 'Registration' },
   { href: '/sponsors', label: 'Sponsors' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/contact-us', label: 'contact-us Us' },
 ];
 
 const Hero = () => {
@@ -129,7 +129,7 @@ const Hero = () => {
               fontSize: 'clamp(1.7rem, 8vw, 3.5rem)', 
               letterSpacing: '4px',
               marginBottom: '1.2rem',
-              background: 'linear-gradient(90deg, #1976d2 30%, #64b5f6 70%)',
+              background: 'linear-gradient(90deg,rgb(150, 196, 241) 30%, #64b5f6 70%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               WebkitTextStroke: '2px #1976d2',

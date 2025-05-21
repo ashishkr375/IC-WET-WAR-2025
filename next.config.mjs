@@ -3,7 +3,9 @@ const nextConfig = {
   images: {
     domains: [
       'www.nitp.ac.in',
-      'ugcounselor-content.s3.ap-south-1.amazonaws.com'
+      'ugcounselor-content.s3.ap-south-1.amazonaws.com',
+      'i.postimg.cc',
+      'scholar.googleusercontent.com',
     ],
   },
 };

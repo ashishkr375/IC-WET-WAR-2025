@@ -1,9 +1,11 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 const registrationFees = [
-  { label: 'Students/Reasearch scholars', value: 'Rs. 5000 / USD 100' },
-  { label: 'Acaedmician/Industry Professionals', value: 'Rs. 9000 / USD 200' },
+  { label: 'Students/Research scholars', value: 'Rs. 5000 / USD 100' },
+  { label: 'Academician/Industry Professionals', value: 'Rs. 9000 / USD 200' },
   { label: 'Spouse', value: 'Rs. 4500 / USD 100' }
 ];
 
@@ -27,136 +29,246 @@ const majorThemes = [
 ];
 
 const importantDates = [
-  { label: 'Abstract submission:', value: '30th June 2025', highlight: true },
+  { label: 'Abstract submission:', value: '30th June 2025' },
   { label: 'Abstract acceptance:', value: '15th July 2025' },
   { label: 'Full length paper:', value: '30th August 2025' },
-  { label: 'Acceptance/Rejection:', value: '15th September 2025', highlight: true },
+  { label: 'Acceptance/Rejection:', value: '15th September 2025' },
   { label: 'Final submission:', value: '30th September 2025' },
   { label: 'Early Birds Registration [Avails 10% discount]:', value: '15th October, 2025', highlight: true },
-  { label: 'Registration(Full pay):', value: '15th November 2025' }
+  { label: 'Registration(Full register):', value: '15th November 2025' }
 ];
 
-const page = () => {
-  return (
-    <div style={{ maxWidth: 900, margin: '2rem auto', padding: '2rem', background: '#f7fbff', borderRadius: '1.5rem', boxShadow: '0 4px 24px rgba(21,101,192,0.08)' }}>
-      {/* Conference Introduction */}
-      <section style={{ marginBottom: '2.5rem' }}>
-        <h1 style={{ color: '#1565c0', fontWeight: 700, fontSize: '2rem', marginBottom: '1rem' }}>
-          International Conference WET-WAR 2025
-        </h1>
-        <p style={{ color: '#234', fontSize: '1.1rem', lineHeight: 1.7 }}>
-          Wetland ecosystems and water resources are among the most productive and biodiversity-rich environments on Earth. Organizing the first-ever conference on wetland ecosystems for sustainable development is a significant step in addressing both local and global environmental challenges such as habitat loss, climate change, and water scarcity. This conference will provide a unique platform for experts, policymakers, researchers, and local communities to come together and share knowledge, collaborate on conservation strategies, and develop solutions for safeguarding wetlands and water resources.
-        </p>
-      </section>
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/author', label: 'Author Section' },
+  { href: '/people', label: 'Key People' },
+  { href: '/register', label: 'Registration' },
+  { href: '/sponsors', label: 'Sponsors' },
+  { href: '/contact-us', label: 'Contact Us' },
+];
 
-      {/* Major Themes */}
-      <section>
-        <h2 style={{ color: '#b71c1c', fontWeight: 700, fontSize: '1.5rem', marginBottom: '1rem' }}>
-          Major Themes
-        </h2>
-        <ul style={{ color: '#234', fontSize: '1.08rem', lineHeight: 1.7, paddingLeft: '1.2rem' }}>
-          {majorThemes.map((theme, idx) => (
-            <li key={idx} style={{ marginBottom: '0.5rem' }}>{theme}</li>
+const Page = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  return (
+    <>
+    <div className="relative w-screen min-h-screen bg-[#0a192f] rounded-2xl shadow-xl text-[#e3f2fd] overflow-x-hidden">
+      {/* Responsive Navbar */}
+      <div className="fixed top-0 left-0 w-full z-30 flex items-center justify-between px-4 sm:px-8 py-4 backdrop-blur-xl bg-[rgba(10,25,47,0.45)]">
+        <div className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="rounded-md mr-3 sm:mr-4"
+          />
+          <span className="text-lg sm:text-2xl font-bold text-blue-100 tracking-widest drop-shadow uppercase font-sans">
+            ICWW
+          </span>
+        </div>
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex space-x-4 sm:space-x-8 font-medium">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="relative hover:text-blue-400 transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-blue-300 after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
+              >
+                {link.label}
+              </a>
+            </li>
           ))}
         </ul>
-      </section>
-
-      {/* Important Dates */}
-      <section style={{ margin: '2.5rem 0' }}>
-        <h2 style={{ color: '#1565c0', fontWeight: 700, fontSize: '2rem', marginBottom: '1.2rem', borderBottom: '3px solid #1565c0', display: 'inline-block', paddingBottom: '0.2rem' }}>
-          Important Dates
-        </h2>
-        <table style={{ width: '100%', fontSize: '1.15rem', marginTop: '1rem', borderCollapse: 'separate', borderSpacing: 0 }}>
-          <tbody>
-            {importantDates.map((item, idx) => (
-              <tr key={idx}>
-                <td style={{
-                  color: item.highlight ? '#b71c1c' : '#1565c0',
-                  fontWeight: item.highlight ? 700 : 500,
-                  padding: '0.4rem 0.5rem 0.4rem 0',
-                  fontFamily: 'inherit'
-                }}>
-                  {item.label}
-                </td>
-                <td style={{
-                  color: '#1565c0',
-                  fontWeight: 500,
-                  padding: '0.4rem 0.5rem',
-                  fontFamily: 'inherit'
-                }}>
-                  {item.value}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-
-      {/* Buttons for submissions */}
-      <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '2.5rem' }}>
+        {/* Mobile Nav Toggle */}
         <button
-          style={{
-            background: '#1565c0',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '0.5rem',
-            padding: '0.75rem 2rem',
-            fontSize: '1.1rem',
-            fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'background 0.2s'
-          }}
-          onClick={() => window.open('#', '_blank')}
+          className="md:hidden flex items-center text-blue-100 focus:outline-none"
+          onClick={() => setNavOpen((v) => !v)}
+          aria-label="Toggle navigation"
         >
-          Abstract Submission
-        </button>
-        <button
-          style={{
-            background: '#b71c1c',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '0.5rem',
-            padding: '0.75rem 2rem',
-            fontSize: '1.1rem',
-            fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'background 0.2s'
-          }}
-          onClick={() => window.open('#', '_blank')}
-        >
-          Paper Submission
+          <svg
+            className={`w-7 h-7 transition-transform duration-200 ${navOpen ? 'rotate-90' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            {navOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
+            )}
+          </svg>
         </button>
       </div>
-
-      {/* Registration Fee Details */}
-      <section style={{ marginBottom: '2.5rem' }}>
-        <h2 style={{ color: '#b71c1c', fontWeight: 700, fontSize: '1.5rem', marginBottom: '1rem' }}>
-          Registration Fee (Free fooding + Inclusive GST (18%))
-        </h2>
-        <table style={{ width: '100%', marginBottom: '1rem', borderCollapse: 'collapse' }}>
-          <tbody>
-            {registrationFees.map((fee, idx) => (
-              <tr key={idx}>
-                <td style={{ color: '#234', fontWeight: 500, padding: '0.5rem 0' }}>{fee.label}</td>
-                <td style={{ color: '#234', textAlign: 'right', padding: '0.5rem 0' }}>{fee.value}</td>
-              </tr>
+      {/* Mobile Nav Menu */}
+      {navOpen && (
+        <div className="fixed top-16 left-0 w-full z-40 bg-[rgba(10,25,47,0.95)] backdrop-blur-xl flex flex-col items-center py-4 md:hidden animate-fade-in-down">
+          <ul className="w-full flex flex-col items-center space-y-4 font-medium">
+            {navLinks.map((link) => (
+              <li key={link.href} className="w-full text-center">
+                <a
+                  href={link.href}
+                  className="block py-2 px-4 w-full hover:text-blue-400 transition relative after:content-[''] after:absolute after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:w-2/3 after:h-0.5 after:bg-blue-300 after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
+                  onClick={() => setNavOpen(false)}
+                >
+                  {link.label}
+                </a>
+              </li>
             ))}
-          </tbody>
-        </table>
-        <div style={{ fontWeight: 600, color: '#234', marginTop: '1rem', marginBottom: '0.5rem' }}>Sponsors:</div>
-        <div style={{ color: '#234', fontSize: '1rem' }}>
-          {sponsors.map((s, idx) => (
-            <span key={idx}>
-              {s.value} ({s.label}){idx < sponsors.length - 1 ? ', ' : ''}
-            </span>
-          ))}
+          </ul>
         </div>
-      </section>
-      <div style={{ textAlign: 'center', color: '#1565c0', fontSize: '1.08rem', margin: '2rem 0 0 0', fontWeight: 500 }}>
-        For any query or issues, please contact at <a href="mailto:icwwrsd2025@nitp.ac.in" style={{ color: '#b71c1c', textDecoration: 'underline' }}>icwwrsd2025@nitp.ac.in</a>
+      )}
+      {/* Main Content */}
+      <div className="max-w-5xl mx-auto p-6 pt-28 bg-[#0a192f] rounded-2xl shadow-xl text-[#e3f2fd]">
+        {/* Conference Introduction */}
+        <section className="mb-10">
+          <h1 className="text-4xl font-bold text-[#64b5f6] mb-4 text-center decoration-[#64b5f6]">
+            International Conference WET-WAR 2025
+          </h1>
+          <p className="text-base leading-7 text-[#b3c7e6]">
+            Wetland ecosystems and water resources are among the most productive and biodiversity-rich environments on Earth. Organizing the first-ever conference on wetland ecosystems for sustainable development is a significant step in addressing both local and global environmental challenges such as habitat loss, climate change, and water scarcity. This conference will provide a unique platform for experts, policymakers, researchers, and local communities to come together and share knowledge, collaborate on conservation strategies, and develop solutions for safeguarding wetlands and water resources.
+          </p>
+        </section>
+
+        {/* Major Themes */}
+        <section>
+          <h2 className="text-4xl font-bold text-[#64b5f6] mb-4 text-center  decoration-[#64b5f6]">Major Themes</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {majorThemes.map((theme, idx) => (
+              <div
+                key={idx}
+                className="bg-[#102744] border border-[#1976d2] rounded-lg text-[#b3c7e6] shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full"
+              >
+                <span className="px-2">{theme}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Important Dates */}
+        <section className="my-12 bg-[#0f172a] bg-opacity-80 rounded-2xl shadow-xl p-4 sm:p-8 backdrop-blur-md border border-[#1e293b] overflow-x-auto">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#64b5f6] border-b-4 border-[#64b5f6] inline-block mb-6 pb-2 tracking-wide">
+            Important Dates
+          </h2>
+          {/* Responsive: Table on md+, stacked on small screens */}
+          <div className="w-full">
+            <table className="hidden sm:table w-full min-w-[340px] text-base sm:text-lg">
+              <tbody>
+                {importantDates.map((item, idx) => (
+                  <tr
+                    key={idx}
+                    className="transition-all duration-300 hover:bg-[#1e293b]/60 rounded-lg"
+                  >
+                    <td
+                      className={`py-3 px-2 sm:px-4 font-semibold ${
+                        item.highlight
+                          ? "bg-gradient-to-r from-[#00e676] to-[#1976d2] bg-clip-text text-transparent"
+                          : "text-[#90caf9]"
+                      }`}
+                    >
+                      {item.label}
+                    </td>
+                    <td className="py-3 px-2 sm:px-4 text-right text-[#e2e8f0] font-medium">
+                      {item.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {/* Stacked for small screens */}
+            <div className="sm:hidden flex flex-col gap-4">
+              {importantDates.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-lg bg-[#13203a] px-4 py-3 flex flex-col shadow transition-all duration-300"
+                >
+                  <span
+                    className={`font-semibold ${
+                      item.highlight
+                        ? "bg-gradient-to-r from-[#00e676] to-[#1976d2] bg-clip-text text-transparent"
+                        : "text-[#90caf9]"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                  <span className="text-[#e2e8f0] font-medium mt-1">{item.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Buttons for submissions */}
+        <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <button
+            className="bg-[#1976d2] hover:bg-[#1565c0] text-white font-semibold px-6 py-2 rounded-lg shadow-md transition"
+            onClick={() => window.open('#', '_blank')}
+          >
+            Abstract Submission
+          </button>
+          <button
+            className="bg-[#1976d1] hover:bg-[#1565c0] text-white font-semibold px-6 py-2 rounded-lg shadow-md transition"
+            onClick={() => window.open('#', '_blank')}
+          >
+            Paper Submission
+          </button>
+        </div>
+
+        {/* Registration Fee Details */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-[#64b5f6] mb-6 flex items-center gap-2">
+            <svg className="w-7 h-7 text-[#64b5f6]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4" />
+            </svg>
+            Registration Fee <span className="text-xs font-normal text-[#b3c7e6]">(Free fooding + Inclusive GST (18%))</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {registrationFees.map((fee, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-[#13203a] to-[#1976d2]/30 border border-[#1976d2] rounded-xl shadow-lg p-5 flex flex-col items-center justify-center transition-transform hover:scale-105"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <svg className="w-6 h-6 text-[#64b5f6]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" strokeOpacity="0.3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l2 2" />
+                  </svg>
+                  <span className="font-semibold text-[#90caf9] text-lg">{fee.label}</span>
+                </div>
+                <div className="text-[#e3f2fd] text-xl font-bold">{fee.value}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 font-semibold text-[#e3f2fd] text-xl flex items-center gap-2">
+            <svg className="w-6 h-6 text-[#ffd600]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 17.75l-6.16 3.24 1.18-6.88L2 9.76l6.92-1.01L12 2.5l3.08 6.25L22 9.76l-5.02 4.35 1.18 6.88z" />
+            </svg>
+            Sponsors
+          </div>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {sponsors.map((s, idx) => (
+              <div
+                key={idx}
+                className={`rounded-lg px-4 py-3 flex flex-col items-center shadow-md border
+                  ${s.label === 'Diamond' ? 'bg-gradient-to-br from-[#b9f6ca] to-[#1976d2]/60 border-[#00e676]' :
+                    s.label === 'Gold' ? 'bg-gradient-to-br from-[#fff9c4] to-[#1976d2]/40 border-[#ffd600]' :
+                    s.label === 'Silver' ? 'bg-gradient-to-br from-[#e3f2fd] to-[#1976d2]/30 border-[#90caf9]' :
+                    'bg-gradient-to-br from-[#ffe0b2] to-[#1976d2]/20 border-[#ffb300]'}`
+                }
+              >
+                <span className="font-bold text-lg mb-1 text-[#1976d2]">{s.label}</span>
+                <span className="text-[#0a192f] font-semibold">{s.value} <span className="text-xs text-[#b3c7e6]">{s.label === 'Diamond' ? 'INR & above' : 'INR'}</span></span>
+              </div>
+            ))}
+          </div>
+        </section>
+        
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
-export default page;
+export default Page;
