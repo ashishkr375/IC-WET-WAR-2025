@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 const registrationFees = [
   { label: 'Students/Research scholars', value: 'Rs. 5000 / USD 100' },
@@ -59,87 +60,11 @@ const Page = () => {
       }}
       className="relative w-screen min-h-screen rounded-2xl shadow-xl overflow-x-hidden"
     >
-      {/* Responsive Navbar */}
-      <div
-        style={{
-          background: "rgba(90,200,250,0.45)",
-        }}
-        className="fixed top-0 left-0 w-full z-30 flex items-center justify-between px-4 sm:px-8 py-4 backdrop-blur-xl"
-      >
-        <div className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={40}
-            height={40}
-            className="rounded-md mr-3 sm:mr-4"
-          />
-          <span style={{ color: "#0277bd" }} className="text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase font-sans">
-            ICWW
-          </span>
-        </div>
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-4 sm:space-x-8 font-medium">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                style={{ color: "#0d223a" }}
-                className="relative hover:text-[#0288d1] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        {/* Mobile Nav Toggle */}
-        <button
-          className="md:hidden flex items-center"
-          style={{ color: "#0277bd" }}
-          onClick={() => setNavOpen((v) => !v)}
-          aria-label="Toggle navigation"
-        >
-          <svg
-            className={`w-7 h-7 transition-transform duration-200 ${navOpen ? 'rotate-90' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            viewBox="0 0 24 24"
-          >
-            {navOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
-            )}
-          </svg>
-        </button>
-      </div>
-      {/* Mobile Nav Menu */}
-      {navOpen && (
-        <div
-          style={{ background: "rgba(90,200,250,0.95)" }}
-          className="fixed top-16 left-0 w-full z-40 backdrop-blur-xl flex flex-col items-center py-4 md:hidden animate-fade-in-down"
-        >
-          <ul className="w-full flex flex-col items-center space-y-4 font-medium">
-            {navLinks.map((link) => (
-              <li key={link.href} className="w-full text-center">
-                <a
-                  href={link.href}
-                  style={{ color: "#0d223a" }}
-                  className="block py-2 px-4 w-full hover:text-[#0288d1] transition relative after:content-[''] after:absolute after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:w-2/3 after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
-                  onClick={() => setNavOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <Navbar/>
       {/* Main Content */}
       <div
         style={{
-          background: "rgba(255,255,255,0.85)",
+          background: "rgba(179,224,252,0.85)", // light sky blue background
           color: "#0d223a",
         }}
         className="max-w-5xl mx-auto p-6 pt-28 rounded-2xl shadow-xl"
