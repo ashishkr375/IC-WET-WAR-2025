@@ -51,12 +51,11 @@ const Navbar = () => {
             className="rounded-md mr-3 sm:mr-4"
           />
           <span
-            className={`text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase font-sans 
-             
-              
-                 "text-[#0D47A1]"
-               
-            }`}
+            className={`text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase font-sans `}
+            style={{
+              WebkitTextStroke: "1px #38bdf8", // sky-400
+              textStroke: "1px #38bdf8"
+            }}
           >
             WET-WAR
           </span>
