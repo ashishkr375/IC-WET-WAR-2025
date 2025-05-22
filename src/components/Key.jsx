@@ -1,31 +1,26 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 
 const objectives = [
   {
     title: "Promote Sustainable Conservation",
-    desc: "Encourage the protection, restoration, and sustainable use of wetlands and water resources to address global challenges like climate change, habitat loss, and water scarcity."
+    desc: "Encourage the protection, restoration, and sustainable use of wetlands and water resources to address global challenges like climate change, habitat loss, and water scarcity.",
   },
   {
     title: "Facilitate Knowledge Sharing and Collaboration",
-    desc: "Create a platform for researchers, policymakers, and communities to exchange ideas, research, and best practices for effective wetland management."
+    desc: "Create a platform for researchers, policymakers, and communities to exchange ideas, research, and best practices for effective wetland management.",
   },
   {
     title: "Strengthen Policy and Community Engagement",
-    desc: "Support development of policies and empower local communities to participate actively in wetland conservation and governance"
+    desc: "Support development of policies and empower local communities to participate actively in wetland conservation and governance.",
   },
   {
     title: "Advance Innovation and Global Partnerships",
-    desc: "Showcase innovative solutions and foster international cooperation to enhance resilience and contribute to sustainable development goals."
-  }
+    desc: "Showcase innovative solutions and foster international cooperation to enhance resilience and contribute to sustainable development goals.",
+  },
 ];
 
-const bgImages = [
-  "/hero1.jpg",
-  "/hero2.jpg",
-  "/hero3.jpg",
-  "/hero4.jpg"
-];
+const bgImages = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg", "/hero4.jpg"];
 
 export default function KeyObjectives() {
   const [bgIdx, setBgIdx] = useState(0);
@@ -39,66 +34,35 @@ export default function KeyObjectives() {
 
   return (
     <section
-      className="w-full py-12 px-2 sm:px-6 relative overflow-hidden"
-      style={{
-        background: "#232323",
-      }}
+      className="w-full py-20 px-4 sm:px-8 relative overflow-hidden"
+      style={{ backgroundColor: "#121212" }}
     >
-      {/* Fixed background image slider */}
+      {/* Background Image */}
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none"
+        className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none select-none"
         style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: "100vh",
-          zIndex: 0,
           background: `url('${bgImages[bgIdx]}') center center / cover no-repeat`,
-          opacity: 0.13,
-          transition: "background-image 1s ease"
+          opacity: 0.12,
+          transition: "background-image 1s ease",
         }}
       />
       <div className="relative z-10">
-        <h2
-          className="text-2xl sm:text-3xl font-extrabold mb-10 text-[#b3e0fc] tracking-wide text-center"
-          style={{ letterSpacing: 1 }}
-        >
+        <h2 className="text-center text-3xl sm:text-4xl font-extrabold tracking-wide text-[#b3e0fc] mb-14">
           KEY OBJECTIVES
         </h2>
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
           {objectives.map((obj, idx) => (
             <div
               key={idx}
-              className="flex-1 min-w-[260px] max-w-xs bg-[#e3eaf0] rounded-none shadow-lg border border-[#b3e0fc] flex flex-col"
-              style={{
-                background: "#b0bec5",
-                borderColor: "#90caf9",
-                minHeight: 260
-              }}
+              className="backdrop-blur-lg bg-white/10 border border-blue-300 shadow-xl rounded-2xl p-6 flex flex-col justify-between transition-transform hover:scale-105 hover:shadow-blue-500/50 duration-300"
             >
-              <div
-                className="py-4 px-3 font-bold text-white text-center text-base sm:text-lg"
-                style={{
-                  background: "#1976a5",
-                  borderTopLeftRadius: 0,
-                  borderTopRightRadius: 0,
-                  letterSpacing: 0.5
-                }}
-              >
+              <h3 className="text-lg font-semibold text-white mb-4">
                 {obj.title}
-              </div>
-              <div
-                className="flex-1 px-4 py-4 text-[15px] text-[#232323] bg-[#e3eaf0] rounded-b"
-                style={{
-                  background: "#cfd8dc",
-                  borderBottomLeftRadius: 0,
-                  borderBottomRightRadius: 0
-                }}
-              >
+              </h3>
+              <p className="text-sm text-gray-200 leading-relaxed">
                 {obj.desc}
-              </div>
+              </p>
             </div>
           ))}
         </div>
