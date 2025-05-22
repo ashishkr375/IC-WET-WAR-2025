@@ -89,18 +89,18 @@ export default function RegisterPage() {
       {/* Main Content */}
       <div
         style={{
-          background: "linear-gradient(135deg, #b3e0fc 0%,rgb(169, 219, 241) 100%)",
+          background: "#b3e0fc",
           color: "#0d223a",
         }}
         className="relative min-h-screen w-full py-20 px-4"
       >
         <div
           style={{
-            background: "rgba(90,200,250,0.13)",
+            background: "#b3e0fc",
             border: "1.5px solidrgb(139, 208, 240)",
             color: "#0d223a",
           }}
-          className=" w-full mx-auto backdrop-blur-2xl rounded-3xl shadow-2xl p-10"
+          className=" w-full mx-auto backdrop-blur-2xl rounded-3xl p-10"
         >
           {/* Header Section */}
           <section className="text-center mb-12 space-y-6">

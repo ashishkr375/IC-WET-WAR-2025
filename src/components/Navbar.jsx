@@ -51,8 +51,12 @@ const Navbar = () => {
             className="rounded-md mr-3 sm:mr-4"
           />
           <span
-            className="text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase text-[#0D47A1
-] font-sans"
+            className={`text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase font-sans 
+             
+              
+                 "text-[#0D47A1]"
+               
+            }`}
           >
             WET-WAR
           </span>

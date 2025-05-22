@@ -50,10 +50,10 @@ const gridBenefits = [
 
 const gridData = [
   // Title, Diamond, Gold, Silver, Bronze
-  ["✓", "✕", "✕", "✕", "✕"], // Title Naming Rights
-  ["✓", "✕", "✕", "✕", "✕"], // Keynote Address Slot
+  ["✓", "✕", "✕", "✕", "✕"], 
+  ["✓", "✕", "✕", "✕", "✕"], 
   ["✕", "✓", "✓", "✕", "✕"], // Plenary Speaker Slot
-  ["✕", "✕", "✕", "✓", "✕"], // Panel Discussion Slot
+  ["✕", "✕", "✕", "✓", "✕"],
   ["✓", "✓", "✓", "✕", "✕"], // Naming on Selected Awards
   ["✕", "✓", "✕", "✕", "✕"], // Naming Rights for Conference Venues
   ["✓", "✓", "✕", "✕", "✕"], // Sponsored Track Sessions/...
@@ -113,7 +113,7 @@ const Page = () => {
     <>
     <Navbar/>
     <div className="bg-gradient-to-br from-[#e3f2fd] via-[#b3e0fc] to-[#e1f5fe] w-full  py-12 px-2 sm:px-6">
-      <div className="w-full mx-auto bg-white/80 rounded-2xl shadow-2xl p-6 sm:p-10">
+      <div className="w-full mx-auto bg-sky-50/80 rounded-2xl shadow-2xl p-6 sm:p-10">
         <h1 className="text-2xl md:text-3xl font-semibold flex items-center border-l-4 border-blue-300 text-blue-400 mb-4 pl-2">
           <span className="bg-blue-100/60 px-2 py-1 rounded-md inline-block">CALL FOR SPONSORS</span>
         </h1>
