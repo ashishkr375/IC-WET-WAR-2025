@@ -9,9 +9,9 @@ const navLinks = [
   {
     label: "Committee",
     dropdown: [
-      { href: "/advisory-committee", label: "Advisory Committee" },
       { href: "/organizing-committee", label: "Organizing Committee" },
-      { href: "/technical-committee", label: "Technical Committee" },
+      { href: "/advisory-committee", label: "Advisory Committee" },
+      // { href: "/technical-committee", label: "Technical Committee" },
     ],
   },
   { href: "/register", label: "Registration" },
@@ -79,7 +79,7 @@ const Navbar = () => {
                 >
                   {link.label}
                   <svg
-                    className="inline ml-2 w-4 h-4"
+                    className={`inline ml-2 w-4 h-4 transition-transform duration-200 ${openDropdown === link.label ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -186,7 +186,7 @@ const Navbar = () => {
                   >
                     {link.label}
                     <svg
-                      className="inline ml-2 w-4 h-4"
+                      className={`inline ml-2 w-4 h-4 transition-transform duration-200 ${openDropdown === link.label ? "rotate-180" : ""}`}
                       fill="none"
                       stroke="currentColor"
                       strokeWidth={2}

@@ -136,7 +136,7 @@ const Hero = () => {
                 fontSize: 'clamp(1.2rem, 7vw, 3.2rem)',
                 letterSpacing: '3px',
                 marginBottom: '0.2rem',
-                background: 'linear-gradient(90deg,rgb(0, 157, 255) 0%, #0072ff 100%)',
+                background: 'linear-gradient(90deg,rgb(0, 157, 255) 0%,rgb(156, 193, 238) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 WebkitTextStroke: '2px #1976d2',

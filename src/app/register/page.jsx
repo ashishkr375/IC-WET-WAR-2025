@@ -23,7 +23,7 @@ const sponsors = [
   { label: "Bronze", value: "₹25,000" },
   { label: "Silver", value: "₹50,000" },
   { label: "Gold", value: "₹1,00,000" },
-  { label: "Diamond", value: "₹2,00,000 and above" }
+  { label: "Diamond", value: "₹2,00,000 " }
 ];
 
 const accountDetails = [
@@ -65,6 +65,18 @@ const paperInfoPoints = [
   {
     color: "bg-blue-200",
     text: "About 100 participants are expected from different parts of the globe. All international students/officers/faculties are requested to take prior approval before coming to India."
+  },
+  {
+    color: "bg-blue-500",
+    text: "All the selected Papers will be published in Conference proceedings (Springer/Elsevier/other Indexed in SCOPUS/SCI/SCIE/ESCI)."
+  },
+  {
+    color: "bg-blue-400",
+    text: "High quality papers presented in the conference would be published in Indexed Journals (SCOPUS/SCI/SCIE/ESCI) after review."
+  },
+  {
+    color: "bg-blue-300",
+    text: "Awards would be provided for Best papers in different Themes for Oral and Poster presentation."
   }
 ];
 
@@ -77,7 +89,7 @@ export default function RegisterPage() {
       {/* Main Content */}
       <div
         style={{
-          background: "linear-gradient(135deg, #b3e0fc 0%, #5ac8fa 100%)",
+          background: "linear-gradient(135deg, #b3e0fc 0%,rgb(169, 219, 241) 100%)",
           color: "#0d223a",
         }}
         className="relative min-h-screen w-full py-20 px-4"
@@ -85,10 +97,10 @@ export default function RegisterPage() {
         <div
           style={{
             background: "rgba(90,200,250,0.13)",
-            border: "1.5px solid #4fc3f7",
+            border: "1.5px solidrgb(139, 208, 240)",
             color: "#0d223a",
           }}
-          className="max-w-5xl w-full mx-auto backdrop-blur-2xl rounded-3xl shadow-2xl p-10"
+          className=" w-full mx-auto backdrop-blur-2xl rounded-3xl shadow-2xl p-10"
         >
           {/* Header Section */}
           <section className="text-center mb-12 space-y-6">
@@ -182,6 +194,13 @@ export default function RegisterPage() {
                 className="w-36 h-36 rounded-lg border"
                 style={{ borderColor: "#0288d1", boxShadow: "0 2px 12px #b3e0fc" }}
               />
+              {/* SCAN & REGISTER Note on right side */}
+              <div className="mt-0 md:mt-0 md:ml-4 bg-blue-50/80 border border-blue-200 rounded-xl p-4 shadow text-blue-900 min-w-[220px] max-w-xs">
+                <h4 className="text-lg font-bold mb-2 tracking-wide">SCAN & REGISTER</h4>
+                <p className="text-sm font-medium">
+                  <span className="font-semibold">Note:</span> Registration Fee payment transaction Number required and Upload payment PDF
+                </p>
+              </div>
             </div>
           </section>
 

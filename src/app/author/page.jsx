@@ -58,7 +58,7 @@ const Page = () => {
           background: "linear-gradient(135deg, #b3e0fc 0%, #5ac8fa 100%)",
           color: "#0d223a",
         }}
-        className="relative w-screen min-h-screen rounded-2xl shadow-xl overflow-x-hidden flex flex-col"
+        className="relative w-screen min-h-screen  shadow-xl overflow-x-hidden flex flex-col"
       >
         <Navbar/>
         {/* Main Content */}
@@ -67,21 +67,32 @@ const Page = () => {
             background: "rgba(179,224,252,0.85)", // light sky blue background
             color: "#0d223a",
           }}
-          className="max-w-5xl mx-auto p-6 pt-28 rounded-2xl shadow-xl flex-1 flex flex-col"
+          className="w-screen mx-auto p-6 pt-28  shadow-xl flex-1 flex flex-col"
         >
           {/* Conference Introduction */}
           <section className="mb-10">
-            <h1 style={{ color: "#0288d1" }} className="text-4xl font-bold mb-4 text-center decoration-[#64b5f6]">
+            <h1
+              style={{ color: "#0288d1" }}
+              className="text-4xl font-bold mb-4 text-center decoration-[#64b5f6] font-sans"
+            >
               International Conference WET-WAR 2025
             </h1>
-            <p style={{ color: "#174366" }} className="text-base leading-7">
+            <p
+              style={{ color: "#174366" }}
+              className="text-base leading-7 font-serif"
+            >
               Wetland ecosystems and water resources are among the most productive and biodiversity-rich environments on Earth. Organizing the first-ever conference on wetland ecosystems for sustainable development is a significant step in addressing both local and global environmental challenges such as habitat loss, climate change, and water scarcity. This conference will provide a unique platform for experts, policymakers, researchers, and local communities to come together and share knowledge, collaborate on conservation strategies, and develop solutions for safeguarding wetlands and water resources.
             </p>
           </section>
 
           {/* Major Themes */}
           <section>
-            <h2 style={{ color: "#0288d1" }} className="text-4xl font-bold mb-4 text-center decoration-[#64b5f6]">Major Themes</h2>
+            <h2
+              style={{ color: "#0288d1" }}
+              className="text-4xl font-bold mb-4 text-center decoration-[#64b5f6] font-sans"
+            >
+              Major Themes
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {majorThemes.map((theme, idx) => (
                 <div
@@ -91,7 +102,7 @@ const Page = () => {
                     border: "1.5px solid #4fc3f7",
                     color: "#0d223a",
                   }}
-                  className="rounded-lg shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full"
+                  className="rounded-lg shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full font-medium font-serif"
                 >
                   <span className="px-2">{theme}</span>
                 </div>
@@ -108,12 +119,15 @@ const Page = () => {
             }}
             className="my-12 rounded-2xl shadow-xl p-4 sm:p-8 backdrop-blur-md overflow-x-auto"
           >
-            <h2 style={{ color: "#0288d1", borderBottom: "4px solid #4fc3f7" }} className="text-2xl sm:text-3xl font-extrabold inline-block mb-6 pb-2 tracking-wide">
+            <h2
+              style={{ color: "#0288d1", borderBottom: "4px solid #4fc3f7" }}
+              className="text-2xl sm:text-3xl font-extrabold inline-block mb-6 pb-2 tracking-wide font-sans"
+            >
               Important Dates
             </h2>
             {/* Responsive: Table on md+, stacked on small screens */}
             <div className="w-full">
-              <table className="hidden sm:table w-full min-w-[340px] text-base sm:text-lg">
+              <table className="hidden sm:table w-full min-w-[340px] text-base sm:text-lg font-mono">
                 <tbody>
                   {importantDates.map((item, idx) => (
                     <tr
@@ -126,12 +140,24 @@ const Page = () => {
                           item.highlight
                             ? "bg-gradient-to-r from-[#00e676] to-[#1976d2] bg-clip-text text-transparent"
                             : ""
-                        }`}
-                        style={item.highlight ? { background: "linear-gradient(to right, #00e676, #1976d2)", WebkitBackgroundClip: "text", color: "transparent" } : { color: "#0277bd" }}
+                        } font-sans`}
+                        style={
+                          item.highlight
+                            ? {
+                                background:
+                                  "linear-gradient(to right, #00e676, #1976d2)",
+                                WebkitBackgroundClip: "text",
+                                color: "transparent",
+                              }
+                            : { color: "#0277bd" }
+                        }
                       >
                         {item.label}
                       </td>
-                      <td className="py-3 px-2 sm:px-4 text-right font-medium" style={{ color: "#174366" }}>
+                      <td
+                        className="py-3 px-2 sm:px-4 text-right font-medium font-mono"
+                        style={{ color: "#174366" }}
+                      >
                         {item.value}
                       </td>
                     </tr>
@@ -147,19 +173,33 @@ const Page = () => {
                       background: "rgba(90,200,250,0.13)",
                       color: "#0d223a",
                     }}
-                    className="rounded-lg px-4 py-3 flex flex-col shadow transition-all duration-300"
+                    className="rounded-lg px-4 py-3 flex flex-col shadow transition-all duration-300 font-mono"
                   >
                     <span
                       className={`font-semibold ${
                         item.highlight
                           ? "bg-gradient-to-r from-[#00e676] to-[#1976d2] bg-clip-text text-transparent"
                           : ""
-                      }`}
-                      style={item.highlight ? { background: "linear-gradient(to right, #00e676, #1976d2)", WebkitBackgroundClip: "text", color: "transparent" } : { color: "#0277bd" }}
+                      } font-sans`}
+                      style={
+                        item.highlight
+                          ? {
+                              background:
+                                "linear-gradient(to right, #00e676, #1976d2)",
+                              WebkitBackgroundClip: "text",
+                              color: "transparent",
+                            }
+                          : { color: "#0277bd" }
+                      }
                     >
                       {item.label}
                     </span>
-                    <span className="font-medium mt-1" style={{ color: "#174366" }}>{item.value}</span>
+                    <span
+                      className="font-medium mt-1 font-mono"
+                      style={{ color: "#174366" }}
+                    >
+                      {item.value}
+                    </span>
                   </div>
                 ))}
               </div>

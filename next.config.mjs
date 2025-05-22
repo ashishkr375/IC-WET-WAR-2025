@@ -10,6 +10,7 @@ const nextConfig = {
       'channeli.in',
       'nihroorkee.gov.in',
       'up.yimg.com',
+      'tse2.mm.bing.net',
     ],
   },
 };

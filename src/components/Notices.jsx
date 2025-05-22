@@ -26,7 +26,7 @@ const Notices = () => (
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'linear-gradient(135deg,#5ac8fa  0%, #b3e0fc 100%)',
+      background: 'linear-gradient(90deg,rgb(147, 211, 243) 0%, #5ac8fa 100%)',
       padding: '4rem 1rem',
     }}
     className="w-full"
@@ -49,7 +49,7 @@ const Notices = () => (
       {/* Notices Column */}
       <div
         style={{
-          background: 'rgba(90, 200, 250, 0.93)',
+          background: 'rgba(165, 222, 248, 0.93)',
           border: '1.5px solid #4fc3f7',
           borderRadius: '1rem',
           padding: '1.5rem',
@@ -72,8 +72,8 @@ const Notices = () => (
       {/* Important Dates Column */}
       <div
         style={{
-          background: 'rgba(90, 200, 250, 0.93)',
-          border: '1.5px solid #4fc3f7',
+          background: 'rgba(165, 222, 248, 0.93)',
+          border: '1.5px solidrgb(167, 215, 237)',
           borderRadius: '1rem',
           padding: '1.5rem',
           boxShadow: '0 8px 32px rgba(90, 200, 250, 0.12)',
@@ -95,7 +95,7 @@ const Notices = () => (
       {/* Conference Column */}
       <div
         style={{
-          background: 'rgba(90, 200, 250, 0.93)',
+          background: 'rgba(165, 222, 248, 0.93)',
           border: '1.5px solid #4fc3f7',
           borderRadius: '1rem',
           padding: '1.5rem',
