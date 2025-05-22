@@ -43,7 +43,7 @@ const Footer = () => {
           <div className={`${fontFamilies[2]}`}>
             <h4 className="font-semibold text-sky-800 mb-2">Sponsors</h4>
             <ul className="space-y-1 text-sm">
-              <li><a href="/call-for-sponsor" className="hover:text-sky-200">Call For Sponsorships</a></li>
+              <li><a href="/call-for-sponsor" className="hover:text-sky-300">Call For Sponsorships</a></li>
               <li><a href="/sponsors" className="hover:text-sky-500">Past Sponsors</a></li>
             </ul>
             <h4 className="font-semibold text-sky-800 mt-4 mb-2">Committee</h4>
