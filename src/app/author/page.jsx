@@ -97,12 +97,13 @@ const Page = () => {
               {majorThemes.map((theme, idx) => (
                 <div
                   key={idx}
+                  className="rounded-lg shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full font-medium font-serif bg-gradient-to-br from-sky-200 to-sky-100 border border-sky-300"
                   style={{
-                    background: "rgba(90,200,250,0.25)",
-                    border: "1.5px solid #4fc3f7",
-                    color: "#0d223a",
+                    color: "#1565c0",
+                    fontWeight: 600,
+                    fontSize: "1.08rem",
+                    letterSpacing: "0.5px"
                   }}
-                  className="rounded-lg shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full font-medium font-serif"
                 >
                   <span className="px-2">{theme}</span>
                 </div>

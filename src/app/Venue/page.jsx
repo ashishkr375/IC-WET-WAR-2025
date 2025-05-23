@@ -28,10 +28,7 @@ const Page = () => {
 
 
         <p className="leading-relaxed">
-          Patna, formerly known as Pataliputra, is the capital of Bihar and one of the oldest
-          inhabited cities in the world. Founded in 600 B.C., it was the capital of Chandragupta
-          Maurya and later revived by Sher Shah Suri. It lies along the Ganges River, stretching 35 km in
-          length and 16–18 km in width.
+          Patna is the capital and largest city of the state of Bihar in India and one of the oldest continuously inhabited places in the world. The original name of Patna was Pataliputra and its history makes a start from the century 600 B.C. Chandragupta Maurya made it his capital in the 4th century B.C. Thereafter the city lost its importance until Sherkhan Suri rose into power in the early 16th century A.D. The modern city of Patna is mainly on the southern bank of the river Ganges. The city also straddles the rivers Son, Gandak and Punpun. The city is approximately 35 kilometres (22 mi) in length and 16 to 18 kilometres (9.9 to 11.2 mi) wide.
         </p>
       </section>
 
@@ -40,8 +37,7 @@ const Page = () => {
         <h2 className="text-2xl md:text-3xl font-semibold pl-4 border-l-4 border-blue-300 text-blue-400">
             <span className="bg-blue-100/60 px-2 py-1 rounded-md inline-block">Reaching Patna</span></h2>
         <p className="leading-relaxed">
-          Patna is well-connected by air, rail, and road. The <strong>Jayaprakash Narayan International Airport</strong>
-          provides daily flights to major cities. Train and bus services are also extensive and reliable.
+          Patna is well-connected to other parts of India and the world through air, rail, and road. Jaiprakash Narayan International Airport offers daily flights to major cities in India and some international destinations. The city also boasts extensive train services and computerized reservation facilities, with daily trains to cities like Delhi, Kolkata, and Chennai.
         </p>
       </section>
 

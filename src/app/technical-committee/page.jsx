@@ -165,7 +165,7 @@ export default function TechnicalCommitteePage() {
       >
         <div className="max-w-5xl mx-auto bg-white/40 rounded-2xl px-2 py-8 shadow-2xl">
           <h1 className="text-[#0288d1] font-bold text-3xl mb-8 text-center drop-shadow">
-            Technical Committee
+            Technical Advisory  Committee
           </h1>
           <h2 className="text-[#0288d1] font-semibold text-2xl mb-4 mt-8 text-center">National</h2>
           <div className="flex flex-wrap justify-center">

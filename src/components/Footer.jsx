@@ -1,98 +1,86 @@
 import React from "react";
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-// Five font families to use
-const fontFamilies = [
-  "font-sans",
-  "font-serif",
-  "font-mono",
-  "font-extrabold",
-  "font-light"
-];
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-sky-200 text-sky-800  w-full px-6 py-12 relative z-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="bg-sky-100 text-sky-800 w-full px-6 py-14 relative z-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* About */}
-        <div className={`${fontFamilies[0]}`}>
-          <h3 className="text-2xl font-bold text-sky-700 mb-4">WET-WAR 2025</h3>
-          <p className="text-sm leading-relaxed text-sky-800 mb-6">
-            WET-WAR 2025 is the first international conference focused on wetland ecosystems for sustainable development. It addresses global challenges like habitat loss and water scarcity by connecting experts, researchers, and communities.
+        <div className="font-sans">
+          <h3 className="text-2xl font-semibold text-sky-900 mb-4">WET-WAR 2025</h3>
+          <p className="text-sm leading-relaxed text-sky-700">
+            WET-WAR 2025 is the first international conference focused on wetland ecosystems for sustainable development. It aims to address global challenges such as habitat loss and water scarcity by fostering collaboration among researchers, experts, and communities.
           </p>
         </div>
 
-        {/* Navigation Links */}
-        <div className="grid grid-cols-2 gap-6">
-          <div className={`${fontFamilies[1]}`}>
-            <h4 className="font-semibold text-sky-800 mb-2">Call for Papers</h4>
-            <ul className="space-y-1 text-sm">
-              <li><a href="/author#themes" className="hover:text-sky-500">Tracks & Themes</a></li>
-              <li><a href="/author#dates" className="hover:text-sky-500">Important Dates</a></li>
-              <li><a href="/author#submission" className="hover:text-sky-500">Submission</a></li>
+        {/* Navigation */}
+        <div className="grid grid-cols-2 gap-8 text-sm">
+          <div className="font-serif">
+            <h4 className="font-medium text-sky-900 mb-3">Call for Papers</h4>
+            <ul className="space-y-1">
+              <li><a href="/author#themes" className="hover:text-sky-600 transition">Tracks & Themes</a></li>
+              <li><a href="/author#dates" className="hover:text-sky-600 transition">Important Dates</a></li>
+              <li><a href="/author#submission" className="hover:text-sky-600 transition">Submission</a></li>
             </ul>
-            <h4 className="font-semibold text-sky-800 mt-4 mb-2">Registration</h4>
-            <ul className="space-y-1 text-sm">
-              <li><a href="/register#fees" className="hover:text-sky-200">Fee Details</a></li>
-              <li><a href="/register#submission" className="hover:text-sky-500">Submission</a></li>
+
+            <h4 className="font-medium text-sky-900 mt-5 mb-3">Registration</h4>
+            <ul className="space-y-1">
+              <li><a href="/register#fees" className="hover:text-sky-600 transition">Fee Details</a></li>
+              <li><a href="/register#submission" className="hover:text-sky-600 transition">Submission</a></li>
             </ul>
           </div>
 
-          <div className={`${fontFamilies[2]}`}>
-            <h4 className="font-semibold text-sky-800 mb-2">Sponsors</h4>
-            <ul className="space-y-1 text-sm">
-              <li><a href="/call-for-sponsor" className="hover:text-sky-300">Call For Sponsorships</a></li>
-              <li><a href="/sponsors" className="hover:text-sky-500">Past Sponsors</a></li>
+          <div className="font-mono">
+            <h4 className="font-medium text-sky-900 mb-3">Sponsors</h4>
+            <ul className="space-y-1">
+              <li><a href="/call-for-sponsor" className="hover:text-sky-600 transition">Call For Sponsorships</a></li>
+              <li><a href="/sponsors" className="hover:text-sky-600 transition">Past Sponsors</a></li>
             </ul>
-            <h4 className="font-semibold text-sky-800 mt-4 mb-2">Committee</h4>
-            <ul className="space-y-1 text-sm">
-              <li><a href="/organizing-committee" className="hover:text-sky-500">Organizing Committee</a></li>
-              <li><a href="/technical-committee" className="hover:text-sky-500">Program Committee</a></li>
-              <li><a href="/advisory-committee" className="hover:text-sky-500">Advisory Committee</a></li>
+
+            <h4 className="font-medium text-sky-900 mt-5 mb-3">Committee</h4>
+            <ul className="space-y-1">
+              <li><a href="/organizing-committee" className="hover:text-sky-600 transition">Organizing Committee</a></li>
+              <li><a href="/technical-committee" className="hover:text-sky-600 transition">Program Committee</a></li>
+              <li><a href="/advisory-committee" className="hover:text-sky-600 transition">Advisory Committee</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Contact + Social */}
-        <div className={`${fontFamilies[3]}`}>
-          <h3 className="text-2xl font-bold text-sky-700 mb-4">Contact</h3>
-          <ul className="space-y-2 text-sm">
+        {/* Contact */}
+        <div className="font-sans">
+          <h3 className="text-2xl font-semibold text-sky-900 mb-4 ml-10">Contact</h3>
+          <ul className="space-y-2 text-sm ml-10">
             <li>
-              <a href="mailto:icwwrsd2025@nitp.ac.in" className="hover:text-sky-500">
-                Email: icwwrsd2025@nitp.ac.in
+              <a href="mailto:icwwrsd2025@nitp.ac.in" className="hover:text-sky-600 transition">
+                icwwrsd2025@nitp.ac.in
               </a>
             </li>
-            <li>
-              <a href="/contact-us" className="hover:text-sky-500">Contact Us</a>
-            </li>
-            <li>
-              <a href="/" className="hover:text-sky-500">Home</a>
-            </li>
+            <li><a href="/contact-us" className="hover:text-sky-600 transition">Contact Us</a></li>
+            <li><a href="/" className="hover:text-sky-600 transition">Home</a></li>
           </ul>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-4 mt-6 text-xl text-sky-700">
-            <a href="#" aria-label="Twitter" className="hover:text-sky-500">
+          <div className="flex items-center gap-5 mt-6 text-xl text-sky-700 ml-10">
+            <a href="#" aria-label="Twitter" className="hover:text-sky-600 transition">
               <FaTwitter />
             </a>
-            <a href="#" aria-label="Facebook" className="hover:text-sky-500">
+            <a href="#" aria-label="Facebook" className="hover:text-sky-600 transition">
               <FaFacebook />
             </a>
-            <a href="#" aria-label="LinkedIn" className="hover:text-sky-500">
+            <a href="#" aria-label="LinkedIn" className="hover:text-sky-600 transition">
               <FaLinkedin />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Footer Bottom */}
-      <div className={`border-t border-sky-200 mt-10 pt-6 text-xs text-center text-sky-700 ${fontFamilies[4]}`}>
-        © {currentYear} <span className="font-semibold text-sky-600">WET-WAR 2025, NIT Patna</span>. All rights reserved.
+      {/* Bottom Text */}
+      <div className="border-t border-sky-200 mt-12 pt-6 text-xs text-center text-sky-600 font-light">
+        © {currentYear} <span className="font-medium text-sky-800">WET-WAR 2025, NIT Patna</span>. All rights reserved.
       </div>
 
-      {/* Make any image below footer invisible */}
+      {/* Hide any image right after footer */}
       <style>{`
         footer + img, footer + div > img {
           display: none !important;

@@ -102,17 +102,10 @@ const Hero = () => {
         }}
       >
         <div
-          className="w-full max-w-[1100px] text-center pointer-events-auto px-2 sm:px-4"
+          className="w-full max-w-[1100px] text-center pointer-events-auto px-2 sm:mt-10"
         >
           <div
-            className="font-extrabold uppercase"
-            style={{
-              fontSize: 'clamp(1.1rem, 4vw, 2.2rem)',
-              marginBottom: '0.7rem',
-              color: '#fff',
-              letterSpacing: '2px',
-              textShadow: '0 2px 12px #1976d2, 0 1px 2px #fff',
-            }}
+            className="font-extrabold uppercase text-white tracking-wider text-[clamp(1.1rem,4vw,2.2rem)] mb-3 drop-shadow-[0_2px_12px_#1976d2,0_1px_2px_#fff] sm:mt-30"
           >
             International Conference On
           </div>
@@ -136,7 +129,7 @@ const Hero = () => {
                 fontSize: 'clamp(1.2rem, 7vw, 3.2rem)',
                 letterSpacing: '3px',
                 marginBottom: '0.2rem',
-                background: 'linear-gradient(90deg,rgb(0, 157, 255) 0%,rgb(156, 193, 238) 100%)',
+                background: 'linear-gradient(90deg,rgb(16, 17, 18) 0%,rgb(50, 50, 50) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 WebkitTextStroke: '2px #1976d2',
