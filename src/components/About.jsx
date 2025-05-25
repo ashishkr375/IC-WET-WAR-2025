@@ -68,10 +68,10 @@ const About = () => (
                 <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#01579b', marginBottom: '1rem', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>
                   About Us
                 </h1>
-                <p style={{ fontSize: '1.2rem', color: '#0d223a', marginBottom: '1.5rem', lineHeight: 1.7, fontFamily: 'serif' }}>
+                <p style={{ fontSize: '1.2rem', color: '#0d223a', marginBottom: '1.5rem', lineHeight: 1.7, fontFamily: 'serif', textAlign: 'center' }}>
                   Welcome to the International Conference on Wetland and Water System for Sustainable Development (WET-WAR 2025), hosted by NIT Patna. Our mission is to bring together researchers, practitioners, and policymakers to discuss innovative solutions for wetland and water system sustainability.
                 </p>
-                <p style={{ fontSize: '1.1rem', color: '#174366', marginBottom: '1.5rem', lineHeight: 1.6, fontFamily: 'serif' }}>
+                <p style={{ fontSize: '1.1rem', color: '#174366', marginBottom: '1.5rem', lineHeight: 1.6, fontFamily: 'serif', textAlign: 'center' }}>
                   The conference will feature keynote speeches, technical sessions, and networking opportunities, fostering collaboration and knowledge sharing in the field of environmental science and engineering.
                 </p>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap', fontFamily: 'monospace' }}>

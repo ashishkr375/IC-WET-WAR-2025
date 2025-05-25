@@ -62,7 +62,7 @@ export default function FAQPage() {
                   </span>
                 </button>
                 {open === idx && (
-                  <div className="px-5 pb-4 text-sky-700 text-base">
+                  <div className="px-5 pb-4 text-sky-700 text-base text-justify">
                     {faq.a}
                   </div>
                 )}

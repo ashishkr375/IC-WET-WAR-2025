@@ -34,7 +34,7 @@ export default function Page() {
       <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-400 mb-3">
         Let’s Connect
       </h2>
-      <p className="text-gray-700 text-base sm:text-lg mb-8 font-medium">
+      <p className="text-gray-700 text-base sm:text-lg mb-8 font-medium text-justify">
         We'd love to hear from you! Fill out the form below to get in touch.
       </p>
 

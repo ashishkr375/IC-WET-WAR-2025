@@ -40,7 +40,7 @@ export default function Page() {
       <div className="relative min-h-screen w-full bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] text-[#174366] pt-24 pb-16 px-4">
        
           <h1 className="text-4xl font-bold text-sky-700 mb-4 text-center">Thank You to Our Previous Sponsors</h1>
-          <p className="text-lg text-center mb-10 text-sky-800">
+          <p className="text-lg text-center mb-10 text-sky-800 text-justify">
             We gratefully acknowledge the generous support of our sponsors whose contributions have made our conference possible.
           </p>
           <section className="mb-10">
