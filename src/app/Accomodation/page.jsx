@@ -29,7 +29,7 @@ export default function AccommodationPage() {
                 href="https://forms.gle/your-shared-hostel-form-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block bg-blue-100 text-blue-900 font-semibold px-5 py-2 rounded-lg border border-blue-200 hover:bg-blue-200 transition text-center"
+                className="mt-4 inline-block bg-gradient-to-r from-sky-400 to-blue-500 text-white font-bold px-6 py-2 rounded-lg border-2 border-sky-500 shadow-lg hover:from-blue-500 hover:to-sky-400 hover:text-white transition text-center ring-2 ring-sky-200 ring-offset-2"
               >
                 Fill the Form
               </a>
@@ -47,7 +47,7 @@ export default function AccommodationPage() {
                 href="https://forms.gle/your-guest-house-form-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block bg-blue-100 text-blue-900 font-semibold px-5 py-2 rounded-lg border border-blue-200 hover:bg-blue-200 transition text-center"
+                className="mt-4 inline-block bg-gradient-to-r from-sky-400 to-blue-500 text-white font-bold px-6 py-2 rounded-lg border-2 border-sky-500 shadow-lg hover:from-blue-500 hover:to-sky-400 hover:text-white transition text-center ring-2 ring-sky-200 ring-offset-2"
               >
                 Fill the Form
               </a>

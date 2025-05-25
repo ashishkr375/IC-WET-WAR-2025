@@ -153,28 +153,6 @@ export default function RegisterPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-10 font-semibold text-xl flex items-center gap-2" style={{ color: "#0d223a" }}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#ffd600" }}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 17.75l-6.16 3.24 1.18-6.88L2 9.76l6.92-1.01L12 2.5l3.08 6.25L22 9.76l-5.02 4.35 1.18 6.88z" />
-              </svg>
-              Sponsors
-            </div>
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {sponsors.map((s, idx) => (
-                <div
-                  key={idx}
-                  className={`rounded-lg px-4 py-3 flex flex-col items-center shadow-md border
-                    ${s.label === 'Diamond' ? 'bg-gradient-to-br from-[#b9f6ca] to-[#4fc3f7]/60 border-[#00e676]' :
-                      s.label === 'Gold' ? 'bg-gradient-to-br from-[#fff9c4] to-[#4fc3f7]/40 border-[#ffd600]' :
-                      s.label === 'Silver' ? 'bg-gradient-to-br from-[#e3f2fd] to-[#4fc3f7]/30 border-[#90caf9]' :
-                      'bg-gradient-to-br from-[#ffe0b2] to-[#4fc3f7]/20 border-[#ffb300]'}`}
-                  style={{ color: "#0d223a" }}
-                >
-                  <span className="font-bold text-lg mb-1" style={{ color: "#0288d1" }}>{s.label}</span>
-                  <span className="font-semibold">{s.value} <span className="text-xs" style={{ color: "#174366" }}>{s.label === 'Diamond' ? 'INR & above' : 'INR'}</span></span>
-                </div>
-              ))}
-            </div>
           </section>
 
           {/* Account and QR Section */}
@@ -204,25 +182,35 @@ export default function RegisterPage() {
             </div>
           </section>
 
-          {/* Paper Info Section */}
-          <ul className="space-y-4">
-            {paperInfoPoints.map((point, idx) => (
-              <li className="flex" key={idx}>
-                <div className={`w-1 ${point.color} rounded-l-full`} />
-                <div
-                  className="shadow-md px-4 py-2 rounded-r-xl flex-1"
-                  style={{
-                    background:"#4682B4",
-                  }}
-                >
-                  <p className="text-sm md:text-base text-white">
-                    {point.text}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-
+          {/* Conference Highlights */}
+          <section className="mt-16">
+            <h2
+              className="text-3xl font-extrabold mb-8 text-center tracking-wide"
+              style={{
+                color: "#fff",
+                textShadow: "0 2px 12px #38bdf8, 0 1px 0 #38bdf8, 0 0px 8px #38bdf8"
+              }}
+            >
+              Conference Highlights
+            </h2>
+            <ul className="space-y-4">
+              {paperInfoPoints.map((point, idx) => (
+                <li className="flex" key={idx}>
+                  <div className={`w-1 ${point.color} rounded-l-full`} />
+                  <div
+                    className="shadow-md px-4 py-2 rounded-r-xl flex-1"
+                    style={{
+                      background:"#4682B4",
+                    }}
+                  >
+                    <p className="text-sm md:text-base text-white">
+                      {point.text}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </div>
       <Footer />
