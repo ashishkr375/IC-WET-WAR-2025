@@ -65,7 +65,7 @@ const Notices = () => (
         {data.notices.map((item, idx) => (
           <div key={idx} style={{ marginBottom: '1rem' }}>
             <div style={{ fontWeight: 600, color: '#0d223a', fontSize: '1rem' }}>{item.title}</div>
-            <div style={{ fontSize: '0.95rem', color: '#174366' }}>{item.detail}</div>
+            <div style={{ fontSize: '0.95rem', color: '#174366', textAlign: 'justify' }}>{item.detail}</div>
           </div>
         ))}
       </div>
@@ -88,7 +88,7 @@ const Notices = () => (
         {data.importantDates.map((item, idx) => (
           <div key={idx} style={{ marginBottom: '1rem' }}>
             <div style={{ fontWeight: 600, color: '#0d223a', fontSize: '1rem' }}>{item.title}</div>
-            <div style={{ fontSize: '0.95rem', color: '#174366' }}>{item.detail}</div>
+            <div style={{ fontSize: '0.95rem', color: '#174366', textAlign: 'justify' }}>{item.detail}</div>
           </div>
         ))}
       </div>
@@ -111,7 +111,7 @@ const Notices = () => (
         {data.conference.map((item, idx) => (
           <div key={idx} style={{ marginBottom: '1rem' }}>
             <div style={{ fontWeight: 600, color: '#0d223a', fontSize: '1rem' }}>{item.title}</div>
-            <div style={{ fontSize: '0.95rem', color: '#174366' }}>{item.detail}</div>
+            <div style={{ fontSize: '0.95rem', color: '#174366', textAlign: 'justify' }}>{item.detail}</div>
           </div>
         ))}
       </div>

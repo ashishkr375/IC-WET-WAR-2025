@@ -79,10 +79,27 @@ const Page = () => {
             </h1>
             <p
               style={{ color: "#174366" }}
-              className="text-base leading-7 font-serif"
+              className="text-base leading-7 font-serif text-justify"
             >
               Wetland ecosystems and water resources are among the most productive and biodiversity-rich environments on Earth. Organizing the first-ever conference on wetland ecosystems for sustainable development is a significant step in addressing both local and global environmental challenges such as habitat loss, climate change, and water scarcity. This conference will provide a unique platform for experts, policymakers, researchers, and local communities to come together and share knowledge, collaborate on conservation strategies, and develop solutions for safeguarding wetlands and water resources.
             </p>
+            {/* Buttons for submissions - moved here */}
+            <div className="flex flex-wrap justify-center gap-6 my-8">
+              <button
+                style={{ background: "#ff9800", color: "#fff" }}
+                className="hover:bg-orange-800 font-bold px-7 py-3 rounded-lg shadow-lg transition text-lg cursor-pointer"
+                onClick={() => window.open('#', '_blank')}
+              >
+                Abstract Submission
+              </button>
+              <button
+                style={{ background: "#43a047", color: "#fff" }}
+                className="hover:bg-green-900 font-bold px-7 py-3 rounded-lg shadow-lg transition text-lg cursor-pointer"
+                onClick={() => window.open('#', '_blank')}
+              >
+                Paper Submission
+              </button>
+            </div>
           </section>
 
           {/* Major Themes */}
@@ -97,15 +114,19 @@ const Page = () => {
               {majorThemes.map((theme, idx) => (
                 <div
                   key={idx}
-                  className="rounded-lg shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full font-medium font-serif bg-gradient-to-br from-sky-200 to-sky-100 border border-sky-300"
+                  className={`rounded-lg shadow-sm flex items-center justify-center text-center h-30 w-full min-h-[96px] min-w-[180px] max-w-full font-serif border border-sky-300
+                    ${idx % 2 === 0
+                      ? "bg-gradient-to-br from-orange-100 to-orange-200"
+                      : "bg-gradient-to-br from-green-100 to-green-200"
+                    } text-gray-700 cursor-pointer transition duration-200 hover:shadow-[0_0_16px_4px_#38bdf8,0_0_8px_2px_#0288d1] hover:scale-105`}
                   style={{
-                    color: "#1565c0",
-                    fontWeight: 600,
-                    fontSize: "1.08rem",
-                    letterSpacing: "0.5px"
+                    fontWeight: 700,
+                    fontSize: "1.18rem",
+                    letterSpacing: "0.5px",
+                    padding: "1.1rem 0.7rem"
                   }}
                 >
-                  <span className="px-2">{theme}</span>
+                  <span className="px-2 font-bold text-lg">{theme}</span>
                 </div>
               ))}
             </div>
@@ -206,24 +227,6 @@ const Page = () => {
               </div>
             </div>
           </section>
-
-          {/* Buttons for submissions */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
-            <button
-              style={{ background: "#0288d1", color: "#fff" }}
-              className="hover:bg-[#0277bd] font-semibold px-6 py-2 rounded-lg shadow-md transition"
-              onClick={() => window.open('#', '_blank')}
-            >
-              Abstract Submission
-            </button>
-            <button
-              style={{ background: "#0288d1", color: "#fff" }}
-              className="hover:bg-[#0277bd] font-semibold px-6 py-2 rounded-lg shadow-md transition"
-              onClick={() => window.open('#', '_blank')}
-            >
-              Paper Submission
-            </button>
-          </div>
 
           {/* Registration Fee Details */}
           <section className="mb-10">

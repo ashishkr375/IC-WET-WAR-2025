@@ -113,7 +113,7 @@ export default function RegisterPage() {
             >
               WET-WAR 2025
             </h1>
-            <p className="text-sm font-medium" style={{ color: "#174366" }}>
+            <p className="text-sm font-medium" style={{ color: "#174366", textAlign: 'justify' }}>
               Join us at <span style={{ color: "#0288d1", fontWeight: 600 }}>NIT Patna</span>
               <span className="mx-1"></span>
               <span className="italic" style={{ color: "#0277bd" }}>delicious food on the Bank of River Ganga</span>

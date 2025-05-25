@@ -27,7 +27,7 @@ export default function CollaborationPage() {
               <h2 className="text-2xl font-bold text-sky-700 mb-2">
                 Department of Architecture and Planning, BIT Mesra
               </h2>
-              <p className="text-sky-900 mb-2">
+              <p className="text-sky-900 mb-2 text-justify">
                 BIT Mesra is one of the oldest Institute of Technology in
                 independent India, founded in 1955 by the visionary industrialist
                 and philanthropist Mr. B.M. Birla. In more than six decades of
@@ -35,7 +35,7 @@ export default function CollaborationPage() {
                 private Engineering Institution oriented toward modern innovations
                 and applications.
               </p>
-              <p className="text-sky-900 mb-2">
+              <p className="text-sky-900 mb-2 text-justify">
                 Department of Architecture & Planning, BIT Mesra, a leading center
                 for research and teaching in architecture, urban design, and
                 sustainable design, is one of the top-ranking Architecture and
@@ -63,7 +63,7 @@ export default function CollaborationPage() {
               <h2 className="text-2xl font-bold text-sky-700 mb-2">
                 Bihar State Wetland Authority, DOEF CC, Bihar
               </h2>
-              <p className="text-sky-900 mb-2">
+              <p className="text-sky-900 mb-2 text-justify">
                 Ministry of Environment, Forest & Climate Change (MoEFCC), has
                 issued the Wetlands (Conservation and Management) Rules 2017 for
                 the integrated management of wetlands. The Government of Bihar has

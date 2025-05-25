@@ -57,10 +57,10 @@ export default function KeyObjectives() {
               key={idx}
               className="backdrop-blur-lg bg-white/10 border border-blue-300 shadow-xl rounded-2xl p-6 flex flex-col justify-between transition-transform hover:scale-105 hover:shadow-blue-500/50 duration-300"
             >
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4 text-center">
                 {obj.title}
               </h3>
-              <p className="text-sm text-gray-200 leading-relaxed">
+              <p className="text-sm text-gray-200 leading-relaxed text-center">
                 {obj.desc}
               </p>
             </div>
