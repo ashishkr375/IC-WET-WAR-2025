@@ -146,7 +146,7 @@ const Footer = () => {
           <p className="text-xs text-sky-50 text-center sm:text-left">
             © {currentYear}{" "}
             <span className="font-medium text-white">WET-WAR 2025, NIT Patna</span>
-            . All rights reserved.
+            . All rights reserved.[Aman Mishra]
           </p>
           <div className="flex items-center mt-4 space-x-4 sm:mt-0 text-xl">
             <a
