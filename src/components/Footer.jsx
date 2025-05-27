@@ -125,10 +125,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/technical-committee"
+                  href="/scientific-committee"
                   className="transition-colors duration-300 text-sky-50 hover:text-white"
                 >
-                  Program Committee
+                  Scientific Committee
                 </a>
               </li>
               <li>

@@ -22,7 +22,7 @@ const page = [
     name: "Sri S. Chandrasekhar, IFS",
     detail: "Member Secretary, BSWA DoEFCC Bihar",
     type: "National",
-    image: "https://up.yimg.com/ib/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&rs=1&c=1&qlt=95&w=120&h=120"
+    image: "https://i.postimg.cc/Z5B1xDz2/image.png"
   },
   {
     name: "Prof. V. R. Desai",
@@ -46,7 +46,7 @@ const page = [
     name: "Prof. Vivekanad Singh",
     detail: "V.C., Purnea University, Bihar",
     type: "National",
-    image: "https://up.yimg.com/ib/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&rs=1&c=1&qlt=95&w=120&h=120"
+    image: "https://i.postimg.cc/SsZNBt1q/image.png"
   },
   {
     name: "Prof. P. Mahanta",
@@ -58,7 +58,7 @@ const page = [
     name: "Prof. (Dr.) Rommel Mehta",
     detail: "Retired Prof., Landscape Arch., SPA New Delhi",
     type: "National",
-    image: ""
+    image: "https://i.postimg.cc/vByQxwkG/image.png"
   },
   {
     name: "Prof. C.S.P. Ojha",
