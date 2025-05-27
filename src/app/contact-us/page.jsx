@@ -215,7 +215,7 @@ export default function Page() {
                     <span className="font-semibold">Phone Numbers:</span>
                     <ul className="ml-2">
                       <li>
-                        Dr. S. K. <span className="font-semibold">986855663</span>
+                        Dr. Ashutosh Kumar –{" "}<span className="font-semibold">986855663</span>
                       </li>
                       <li>
                         Dr. Anushri Barman –{" "}

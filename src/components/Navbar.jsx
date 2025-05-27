@@ -11,7 +11,7 @@ const navLinks = [
 		dropdown: [
 			{ href: "/organizing-committee", label: "Organizing Committee" },
 			{ href: "/advisory-committee", label: "Advisory Committee" },
-			{ href: "/colloboration", label: "Technical Colloboration" },
+			// { href: "/colloboration", label: "Technical Colloboration" },
 		],
 	},
 	{ href: "/register", label: "Registration" },
@@ -49,7 +49,7 @@ const Navbar = () => {
 						className="rounded-md mr-3 sm:mr-4"
 					/>
 					<span
-						className="text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase font-sans"
+						className="text-lg sm:text-2xl font-bold tracking-widest drop-shadow uppercase font-sans text-[#1976d2]"
 						style={{
 							WebkitTextStroke: "1px rgb(3, 13, 17)",
 							textStroke: "1px #38bdf8",
