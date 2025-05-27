@@ -11,7 +11,7 @@ const navLinks = [
 		dropdown: [
 			{ href: "/organizing-committee", label: "Organizing Committee" },
 			{ href: "/advisory-committee", label: "Advisory Committee" },
-			// { href: "/colloboration", label: "Technical Colloboration" },
+			{ href: "/scientific-committee", label: "Scientific Committee" },
 		],
 	},
 	{ href: "/register", label: "Registration" },
