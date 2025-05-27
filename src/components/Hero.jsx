@@ -3,7 +3,12 @@ import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import Navbar from './Navbar';
 import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim"; // use tsparticles-slim for custom shapes
+import { loadSlim } from "tsparticles-slim";
+import { Inter, Montserrat, Poppins } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], weight: ['400', '700', '900'] });
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700', '900'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700', '900'] });
 
 const RainParticles = () => {
   const particlesInit = useCallback(async engine => {
@@ -55,24 +60,32 @@ const Hero = () => {
   return  (
     <>
       <Navbar />
-      <section className="relative bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] text-black min-h-screen h-screen flex items-center overflow-hidden font-['Inter',_Montserrat,_sans-serif]">
+      <section className={`relative bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] text-black min-h-screen h-screen flex items-center overflow-hidden ${inter.className}`}>
         <RainParticles />
         <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 md:px-8 z-10 flex flex-col items-center">
           <div className="w-full flex justify-center">
-            <h2 className="text-base xs:text-lg sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] font-extrabold leading-tight mb-2 text-center whitespace-nowrap font-['Inter',_Montserrat,_Oswald,_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+            <h2 className={`text-base xs:text-lg sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] font-extrabold leading-tight mb-2 text-center whitespace-nowrap ${montserrat.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}>
               International Conference On
             </h2>
           </div>
-          <div className="text-xs xs:text-sm sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-0 text-center font-bold whitespace-nowrap text-black font-['Poppins',_Montserrat,_Inter,_Oswald,_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+          <div className={`text-xs xs:text-base sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-0 text-center font-bold whitespace-nowrap text-black ${poppins.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}>
             Wetland and Water Resource
           </div>
-          <div className="text-xs xs:text-sm sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-2 text-center font-bold whitespace-nowrap text-black font-['Poppins',_Montserrat,_Inter,_Oswald,_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+          <div className={`text-xs xs:text-base sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-2 text-center font-bold whitespace-nowrap text-black ${poppins.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}>
             For Sustainable Development
           </div>
-          <div className="text-xs xs:text-base sm:text-lg md:text-xl font-extrabold mb-2 text-center text-black font-['Inter',_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+          <div
+            className={`text-xs xs:text-base sm:text-lg md:text-xl font-extrabold mb-2 text-center ${inter.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}
+            style={{
+              color: "#FFD600", // matches the attached yellow color
+              fontSize: "1.3rem",
+              fontWeight: 900,
+            
+            }}
+          >
             WET-WAR 2025 (International)
           </div>
-          <div className="text-xs xs:text-base sm:text-lg font-bold mb-4 text-center text-black font-['Inter',_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+          <div className={`text-xs xs:text-base sm:text-lg font-bold mb-4 text-center text-black ${inter.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}>
             (29–31 December 2025)
           </div>
           {/* NIT Patna Logo and Name */}
@@ -84,16 +97,17 @@ const Hero = () => {
               height={120}
               className="rounded-[12px] shadow p-2 mb-2 w-[60px] h-[60px] xs:w-[80px] xs:h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px]"
             />
-            <span className="font-bold text-xs xs:text-sm sm:text-base rounded px-2 xs:px-3 py-1 text-black bg-[rgba(255,255,255,0.12)] font-['Inter',_Bebas_Neue,_cursive] tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+            <span className={`font-bold text-xs xs:text-sm sm:text-base rounded px-2 xs:px-3 py-1 text-black bg-[rgba(255,255,255,0.12)] ${inter.className} tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]`}>
               National Institute of Technology, Patna
             </span>
           </div>
-          <div className="font-bold text-xs xs:text-sm sm:text-base mb-2 text-center text-black font-['Inter',_Bebas_Neue,_cursive] tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+          <div className={`font-bold text-xs xs:text-sm sm:text-base mb-2 text-center text-black ${inter.className} tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]`}>
             In Technical Collaboration with
           </div>
           {/* Collaboration Logos */}
           <div className="flex flex-col gap-2 w-full">
-            <div className="flex flex-row items-center justify-center gap-4 w-full">
+            {/* Responsive: stack logos/text on mobile, inline on md+ */}
+            <div className="flex flex-col xs:flex-row items-center justify-center gap-4 w-full">
               <img
                 src="/bitmlogo.png"
                 alt="BIT Mesra Logo"
@@ -101,20 +115,22 @@ const Hero = () => {
                 height={48}
                 className="rounded-[10px] shadow p-1 w-[36px] h-[36px] xs:w-[44px] xs:h-[44px] sm:w-[48px] sm:h-[48px] md:w-[56px] md:h-[56px]"
               />
-              <span className="font-bold text-xs xs:text-sm sm:text-lg md:text-xl whitespace-nowrap text-black font-['Inter',_Bebas_Neue,_cursive] tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+              <span className={`font-bold text-xs xs:text-sm sm:text-lg md:text-xl whitespace-nowrap text-black ${inter.className} tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]`}>
                 Birla Institute of Technology, Mesra
               </span>
               <span className="hidden md:inline-block w-4"></span>
-              <img
-                src="/BSWA.png"
-                alt="Bihar State Wetland Authority Logo"
-                width={48}
-                height={48}
-                className="rounded-[10px] shadow p-1 w-[36px] h-[36px] xs:w-[44px] xs:h-[44px] sm:w-[48px] sm:h-[48px] md:w-[56px] md:h-[56px]"
-              />
-              <span className="font-bold text-xs xs:text-sm sm:text-lg md:text-xl whitespace-nowrap text-black font-['Inter',_Bebas_Neue,_cursive] tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
-                Bihar State Wetland Authority
-              </span>
+              <div className="flex flex-col items-center md:flex-row md:items-center">
+                <img
+                  src="/BSWA.png"
+                  alt="Bihar State Wetland Authority Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-[10px] shadow p-1 w-[36px] h-[36px] xs:w-[44px] xs:h-[44px] sm:w-[48px] sm:h-[48px] md:w-[56px] md:h-[56px]"
+                />
+                <span className={`font-bold text-xs xs:text-sm sm:text-lg md:text-xl whitespace-nowrap text-black ${inter.className} tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8] md:ml-2`}>
+                  <span className="block md:inline">Bihar State Wetland Authority</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>

@@ -17,8 +17,8 @@ const Footer = () => {
       <div className="relative px-4 pt-12 mx-auto max-w-7xl md:px-12 lg:px-8">
         <div className="grid gap-10 row-gap-8 mb-8 md:grid-cols-2 lg:grid-cols-5">
           {/* About */}
-          <div className="flex flex-col lg:col-span-1.5">
-            <span className="text-2xl font-bold tracking-wide text-white uppercase mb-2">
+          <div className="flex flex-col lg:col-span-1.5 items-center lg:items-start">
+            <span className="text-2xl font-bold tracking-wide text-white uppercase mb-2 text-center lg:text-left block w-full">
               WET-WAR 2025
             </span>
             <p className="text-sm text-sky-50 text-center">
@@ -30,11 +30,11 @@ const Footer = () => {
             </p>
           </div>
           {/* Call for Papers */}
-          <div>
-            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2 text-center md:text-left">
               Call for Papers
             </p>
-            <ul className="mt-2 space-y-2">
+            <ul className="mt-2 space-y-2 flex flex-col items-center md:items-start">
               <li>
                 <a
                   href="/author#themes"
@@ -62,11 +62,11 @@ const Footer = () => {
             </ul>
           </div>
           {/* Registration */}
-          <div>
-            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2 text-center md:text-left">
               Registration
             </p>
-            <ul className="mt-2 space-y-2">
+            <ul className="mt-2 space-y-2 flex flex-col items-center md:items-start">
               <li>
                 <a
                   href="/register#fees"
@@ -86,11 +86,11 @@ const Footer = () => {
             </ul>
           </div>
           {/* Sponsors */}
-          <div>
-            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2 text-center md:text-left">
               Sponsors
             </p>
-            <ul className="mt-2 space-y-2">
+            <ul className="mt-2 space-y-2 flex flex-col items-center md:items-start">
               <li>
                 <a
                   href="/call-for-sponsor"
@@ -110,11 +110,11 @@ const Footer = () => {
             </ul>
           </div>
           {/* Committee */}
-          <div>
-            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2 text-center md:text-left">
               Committee
             </p>
-            <ul className="mt-2 flex flex-col space-y-2">
+            <ul className="mt-2 flex flex-col space-y-2 items-center md:items-start">
               <li>
                 <a
                   href="/organizing-committee"
