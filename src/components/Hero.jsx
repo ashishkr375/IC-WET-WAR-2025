@@ -1,276 +1,190 @@
 "use client"
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Navbar from './Navbar';
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim"; // use tsparticles-slim for custom shapes
 
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/author', label: 'Author Section' },
-  { href: '/people', label: 'Key People' },
-  { href: '/register', label: 'Registration' },
-  { href: '/sponsors', label: 'Sponsors' },
-  { href: '/contact-us', label: 'Contac Us' },
-];
-
-const sliderImages = [
-  "/hero1.jpg",
-  "/hero2.jpg",
-  "/hero3.jpg",
-  "/hero4.jpg",
-
-];
-
-const Hero = () => {
-  const [navOpen, setNavOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % sliderImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
+const RainParticles = () => {
+  const particlesInit = useCallback(async engine => {
+    await loadSlim(engine);
   }, []);
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        width: '100vw',
-        height: '100vh',
-        overflow: 'hidden',
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      options={{
+        background: { color: "#19aaff" },
+        fpsLimit: 60,
+        particles: {
+          number: { value: 120, density: { enable: true, area: 800 } },
+          color: { value: "#fff" }, // white color
+          shape: { type: "circle" }, // circle shape
+          opacity: { value: 0.7 },
+          size: { value: { min: 1, max: 2 } },
+          move: {
+            enable: true,
+            direction: "bottom",
+            speed: 3,
+            straight: true,
+            outModes: { default: "out" }
+          }
+        },
+        detectRetina: true,
+        interactivity: {
+          events: {
+            onHover: { enable: false },
+            onClick: { enable: false }
+          }
+        }
       }}
-      className="min-h-screen w-full"
-    >
-      {/* Responsive Navbar */}
-      <Navbar/>
-      {/* Image Slider */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          zIndex: 0,
-        }}
-      >
-        {sliderImages.map((img, idx) => (
-          <Image
-            key={img}
-            src={img}
-            alt={`Hero Slide ${idx + 1}`}
-            fill
-            style={{
-              objectFit: 'cover',
-              transition: 'opacity 0.8s ease',
-              opacity: idx === currentImage ? 1 : 0,
-              position: 'absolute',
-              top: 0,
-              left: 0,
-            }}
-            priority={idx === 0}
-            sizes="100vw"
-          />
-        ))}
-      </div>
-      {/* Bluish blur overlay over the whole photo */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(135deg, rgba(90,200,250,0.45) 0%, rgba(10, 19, 47, 0.45) 100%)',
-          backdropFilter: 'blur(3px)',
-          WebkitBackdropFilter: 'blur(6px)',
-          zIndex: 1,
-          pointerEvents: 'none',
-        }}
-      />
-      {/* Centered text over the blurred area */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 2,
-          pointerEvents: 'none',
-        }}
-      >
-        <div
-          className="w-full max-w-[1100px] text-center pointer-events-auto px-2 sm:mt-10"
-        >
-          <div
-            className="font-extrabold uppercase text-white tracking-wider text-[clamp(1.1rem,4vw,2.2rem)] mb-3 drop-shadow-[0_2px_12px_#1976d2,0_1px_2px_#fff] sm:mt-30"
-          >
-            International Conference On
+      className="absolute inset-0 z-0 pointer-events-none"
+    />
+  );
+};
+
+const Hero = () => {
+ 
+
+
+
+  return  (
+    <>
+      <Navbar />
+      <section className="relative bg-[#19aaff] text-white min-h-screen h-screen flex items-center overflow-hidden">
+        <RainParticles />
+        <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 md:px-8 z-10 flex flex-col items-center">
+          <div className="w-full flex justify-center">
+            <h2 className="text-base xs:text-lg sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] font-extrabold leading-tight mb-2 text-center whitespace-nowrap font-['Montserrat',_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+              International Conference On
+            </h2>
           </div>
-          <div className="relative flex items-center justify-center w-full">
-            {/* Left blur */}
-            <span
-              className="hidden sm:block"
-              style={{
-                width: 40,
-                height: 40,
-                borderRadius: '50%',
-                filter: 'blur(18px)',
-                background: 'rgba(0,157,255,0.35)',
-                marginRight: 12,
-                display: 'inline-block',
-              }}
+          <div className="text-xs xs:text-sm sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-0 text-center font-extrabold whitespace-nowrap text-white font-['Montserrat',_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+            Wetland and Water Resource
+          </div>
+          <div className="text-xs xs:text-sm sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-2 text-center font-extrabold whitespace-nowrap text-white font-['Montserrat',_Bebas_Neue,_cursive] tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+            For Sustainable Development
+          </div>
+          <div className="text-xs xs:text-base sm:text-lg md:text-xl font-extrabold mb-2 text-center text-white font-bebas tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+            WET-WAR 2025 (International)
+          </div>
+          <div className="text-xs xs:text-base sm:text-lg font-bold mb-4 text-center text-white font-bebas tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]">
+            (29–31 December 2025)
+          </div>
+          {/* NIT Patna Logo and Name */}
+          <div className="flex flex-col items-center mb-4">
+            <img
+              src="https://www.nitp.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.00e5159e.png&w=256&q=75"
+              alt="NIT Patna Logo"
+              width={60}
+              height={60}
+              className="rounded-[12px] shadow p-2 mb-2 w-[40px] h-[40px] xs:w-[50px] xs:h-[50px] sm:w-[60px] sm:h-[60px] md:w-[70px] md:h-[70px]"
             />
-            <div
-              className="font-extrabold uppercase"
-              style={{
-                fontSize: 'clamp(1.2rem, 7vw, 3.2rem)',
-                letterSpacing: '3px',
-                marginBottom: '0.2rem',
-                background: 'linear-gradient(90deg,rgb(16, 17, 18) 0%,rgb(50, 50, 50) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                WebkitTextStroke: '2px #1976d2',
-                textStroke: '2px #1976d2',
-                zIndex: 1,
-              }}
-            >
-              Wetland and Water  Resource  For Sustainable Development
-            </div>
-            {/* Right blur */}
-            <span
-              className="hidden sm:block"
-              style={{
-                width: 40,
-                height: 40,
-                borderRadius: '50%',
-                filter: 'blur(18px)',
-                background: 'rgba(0,157,255,0.35)',
-                marginLeft: 12,
-                display: 'inline-block',
-              }}
-            />
+            <span className="font-bold text-xs xs:text-sm sm:text-base rounded px-2 xs:px-3 py-1 text-white bg-[rgba(255,255,255,0.12)] font-bebas tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+              National Institute of Technology, Patna
+            </span>
           </div>
-          <div
-            className="font-semibold"
-            style={{
-              fontSize: 'clamp(1rem, 4vw, 2.2rem)',
-              marginBottom: '0.7rem',
-              color: '#fff',
-              letterSpacing: '2px',
-              textShadow: '0 2px 12px #1976d2, 0 1px 2px #fff',
-            }}
-          >
-            WET-WAR 2025(International)
+          <div className="font-bold text-xs xs:text-sm sm:text-base mb-2 text-center text-white font-bebas tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+            In Technical Collaboration with
           </div>
-          <div
-            className="font-medium"
-            style={{
-              fontSize: 'clamp(0.95rem, 3vw, 1.7rem)',
-              color: '#e3f2fd',
-              letterSpacing: '2px',
-              textShadow: '0 1px 8px #1976d2',
-            }}
-          >
-            (29-31 December 2025)
-          </div>
-          {/* Logos and collaboration text below the date */}
-          <div className="flex flex-col items-center gap-2 mt-4 sm:mt-6">
-            {/* NITP logo and name */}
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 justify-center mb-2">
-              <Image
-                src="https://www.nitp.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.00e5159e.png&w=256&q=75"
-                alt="NIT Patna Logo"
-                width={70}
-                height={70}
-                className="rounded-md shadow p-2"
-                style={{ borderRadius: "12px" }}
+          {/* Collaboration Logos */}
+          <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-row items-center justify-center gap-4 w-full">
+              <img
+                src="/bitmlogo.png"
+                alt="BIT Mesra Logo"
+                width={32}
+                height={32}
+                className="rounded-[10px] shadow p-1 w-[20px] h-[20px] xs:w-[28px] xs:h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]"
               />
-              <span
-                style={{
-                  fontWeight: 700,
-                  color: "#fff",
-                  fontSize: "1.1rem",
-                  letterSpacing: "1px",
-                  textShadow: "0 1px 8px #1976d2",
-                  background: "rgba(30,137,238,0.15)",
-                  borderRadius: "8px",
-                  padding: "0.4rem 0.8rem"
-                }}
-                className="mt-2 sm:mt-0"
-              >
-                National Institute of Technology, Patna
+              <span className="font-bold text-[10px] xs:text-xs sm:text-sm md:text-base whitespace-nowrap text-white font-bebas tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+                Birla Institute of Technology, Mesra
               </span>
-            </div>
-            {/* Collaboration text and logos */}
-            <div className="flex flex-col items-center gap-2">
-              <span
-                style={{
-                  fontWeight: 600,
-                  color: "#fff",
-                  fontSize: "0.95rem",
-                  letterSpacing: "1px",
-                  textShadow: "0 1px 8px #1976d2",
-                  background: "rgba(30,137,238,0.10)",
-                  borderRadius: "8px",
-                  padding: "0.3rem 0.7rem"
-                }}
-              >
-                In Technical Collaboration with
+              <span className="hidden md:inline-block w-4"></span>
+              <img
+                src="/BSWA.png"
+                alt="Bihar State Wetland Authority Logo"
+                width={32}
+                height={32}
+                className="rounded-[10px] shadow p-1 w-[20px] h-[20px] xs:w-[28px] xs:h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]"
+              />
+              <span className="font-bold text-[10px] xs:text-xs sm:text-sm md:text-base whitespace-nowrap text-white font-bebas tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]">
+                Bihar State Wetland Authority
               </span>
-              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 justify-center mt-1">
-                {/* BIT Mesra */}
-                <div className="flex items-center gap-2 mb-2 sm:mb-0">
-                  <Image
-                    src="/bitmlogo.png"
-                    alt="BIT Mesra Logo"
-                    width={38}
-                    height={38}
-                    className="rounded-md shadow p-1"
-                    style={{ borderRadius: "10px" }}
-                  />
-                  <span
-                    style={{
-                      fontWeight: 600,
-                      color: "#fff",
-                      fontSize: "0.95rem",
-                      letterSpacing: "0.5px",
-                      textShadow: "0 1px 8px #1976d2",
-                    }}
-                  >
-                    Birla Institute of Technology, Mesra
-                  </span>
-                </div>
-                {/* Bihar State Wetland Authority */}
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/BSWA.png"
-                    alt="Bihar State Wetland Authority Logo"
-                    width={38}
-                    height={38}
-                    className="rounded-md shadow p-1"
-                    style={{ borderRadius: "10px" }}
-                  />
-                  <span
-                    style={{
-                      fontWeight: 600,
-                      color: "#fff",
-                      fontSize: "0.95rem",
-                      letterSpacing: "0.5px",
-                      textShadow: "0 1px 8px #1976d2",
-                    }}
-                  >
-                    Bihar State Wetland Authority
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        <div className="waves bg-gradient-to-br from-[#2f4fff] to-[#4973ff]"></div>
+      </section>
+      {/* Scoped styles for the wave */}
+      <style jsx>{`
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-width: 100%;
+    height: 18vw;
+    min-height: 90px;
+    max-height: 200px;
+    bg-[#19aaff]
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .waves::before,
+  .waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    border-radius: 44%;
+  }
+
+  .waves::before {
+    background: #19aaff;
+    animation: wave1 8s linear infinite;
+  }
+
+  .waves::after {
+    background: rgba(0, 191, 255, 0.25); /* Lighter sky blue */
+    animation: wave2 15s linear infinite;
+  }
+
+  @media (max-width: 640px) {
+    .waves {
+      height: 60px;
+      min-height: 40px;
+      max-height: 80px;
+    }
+  }
+
+  @keyframes wave1 {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+  @keyframes wave2 {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+`}</style>
+
+    </>
   );
 };
 

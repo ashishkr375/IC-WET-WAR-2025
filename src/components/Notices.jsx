@@ -19,101 +19,71 @@ const data = {
 };
 
 const Notices = () => (
-  <section
-    style={{
-      minHeight: '80vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: 'linear-gradient(90deg,rgb(147, 211, 243) 0%, #5ac8fa 100%)',
-      padding: '4rem 1rem',
-    }}
-    className="w-full"
-  >
-    <h2
-      style={{
-        color: '#01579b',
-        fontWeight: 'bold',
-        fontSize: '2.25rem',
-        marginBottom: '2rem',
-        textAlign: 'center',
-        letterSpacing: '0.2em',
-        textTransform: 'uppercase',
-        textShadow: '0 2px 12px #4fc3f7',
-      }}
-    >
+  <section className="w-full min-h-[80vh] flex flex-col items-center justify-center bg-[#19aaff] py-16 px-4">
+    <h2 className="text-white font-bold text-3xl sm:text-4xl mb-8 text-center tracking-widest uppercase drop-shadow-[0_2px_12px_#fff]">
       Notification
     </h2>
     <div className="flex flex-wrap gap-6 justify-center w-full max-w-screen-xl">
       {/* Notices Column */}
-      <div
-        style={{
-          background: 'rgba(165, 222, 248, 0.93)',
-          border: '1.5px solid #4fc3f7',
-          borderRadius: '1rem',
-          padding: '1.5rem',
-          boxShadow: '0 8px 32px rgba(90, 200, 250, 0.12)',
-          minWidth: 280,
-          maxWidth: 400,
-          flex: 1,
-        }}
-      >
-        <div style={{ fontWeight: 700, color: '#0277bd', fontSize: '1.25rem', marginBottom: '1rem', letterSpacing: '0.05em' }}>
-          Notices
+      <div className="relative bg-white/80 border border-white rounded-xl p-6 shadow-lg min-w-[260px] max-w-xs flex-1 flex flex-col items-start">
+        <div className="w-full flex justify-center mb-4">
+          <span className="font-bold text-[#19aaff] text-lg tracking-wide uppercase bg-white/80 px-4 py-1 rounded shadow drop-shadow-[0_2px_8px_#19aaff]">
+            Notices
+          </span>
         </div>
         {data.notices.map((item, idx) => (
-          <div key={idx} style={{ marginBottom: '1rem' }}>
-            <div style={{ fontWeight: 600, color: '#0d223a', fontSize: '1rem' }}>{item.title}</div>
-            <div style={{ fontSize: '0.95rem', color: '#174366', textAlign: 'justify' }}>{item.detail}</div>
+          <div
+            key={idx}
+            className="mb-4 rounded-lg transition-shadow hover:shadow-[0_4px_24px_0_rgba(25,170,255,0.25)] p-2"
+          >
+            <div className="font-semibold text-[#174366] text-base">{item.title}</div>
+            <div className="text-sm text-[#0d223a] text-justify">{item.detail}</div>
           </div>
         ))}
+        {/* Box shadow below text */}
+        <div className="absolute left-4 right-4 bottom-2 h-4 rounded-xl shadow-[0_8px_24px_0_rgba(25,170,255,0.18)] -z-10"></div>
       </div>
+      {/* Gap Box */}
+      <div className="hidden lg:block w-8"></div>
       {/* Important Dates Column */}
-      <div
-        style={{
-          background: 'rgba(165, 222, 248, 0.93)',
-          border: '1.5px solidrgb(167, 215, 237)',
-          borderRadius: '1rem',
-          padding: '1.5rem',
-          boxShadow: '0 8px 32px rgba(90, 200, 250, 0.12)',
-          minWidth: 280,
-          maxWidth: 400,
-          flex: 1,
-        }}
-      >
-        <div style={{ fontWeight: 700, color: '#0277bd', fontSize: '1.25rem', marginBottom: '1rem', letterSpacing: '0.05em' }}>
-          Important Dates
+      <div className="relative bg-white/80 border border-white rounded-xl p-6 shadow-lg min-w-[260px] max-w-xs flex-1 flex flex-col items-start">
+        <div className="w-full flex justify-center mb-4">
+          <span className="font-bold text-[#19aaff] text-lg tracking-wide uppercase bg-white/80 px-4 py-1 rounded shadow drop-shadow-[0_2px_8px_#19aaff]">
+            Important Dates
+          </span>
         </div>
         {data.importantDates.map((item, idx) => (
-          <div key={idx} style={{ marginBottom: '1rem' }}>
-            <div style={{ fontWeight: 600, color: '#0d223a', fontSize: '1rem' }}>{item.title}</div>
-            <div style={{ fontSize: '0.95rem', color: '#174366', textAlign: 'justify' }}>{item.detail}</div>
+          <div
+            key={idx}
+            className="mb-4 rounded-lg transition-shadow hover:shadow-[0_4px_24px_0_rgba(25,170,255,0.25)] p-2"
+          >
+            <div className="font-semibold text-[#174366] text-base">{item.title}</div>
+            <div className="text-sm text-[#0d223a] text-justify">{item.detail}</div>
           </div>
         ))}
+        {/* Box shadow below text */}
+        <div className="absolute left-4 right-4 bottom-2 h-4 rounded-xl shadow-[0_8px_24px_0_rgba(25,170,255,0.18)] -z-10"></div>
       </div>
+      {/* Gap Box */}
+      <div className="hidden lg:block w-8"></div>
       {/* Conference Column */}
-      <div
-        style={{
-          background: 'rgba(165, 222, 248, 0.93)',
-          border: '1.5px solid #4fc3f7',
-          borderRadius: '1rem',
-          padding: '1.5rem',
-          boxShadow: '0 8px 32px rgba(90, 200, 250, 0.12)',
-          minWidth: 280,
-          maxWidth: 400,
-          flex: 1,
-        }}
-      >
-        <div style={{ fontWeight: 700, color: '#0277bd', fontSize: '1.25rem', marginBottom: '1rem', letterSpacing: '0.05em' }}>
-          Conference
+      <div className="relative bg-white/80 border border-white rounded-xl p-6 shadow-lg min-w-[260px] max-w-xs flex-1 flex flex-col items-start">
+        <div className="w-full flex justify-center mb-4">
+          <span className="font-bold text-[#19aaff] text-lg tracking-wide uppercase bg-white/80 px-4 py-1 rounded shadow drop-shadow-[0_2px_8px_#19aaff]">
+            Conference
+          </span>
         </div>
         {data.conference.map((item, idx) => (
-          <div key={idx} style={{ marginBottom: '1rem' }}>
-            <div style={{ fontWeight: 600, color: '#0d223a', fontSize: '1rem' }}>{item.title}</div>
-            <div style={{ fontSize: '0.95rem', color: '#174366', textAlign: 'justify' }}>{item.detail}</div>
+          <div
+            key={idx}
+            className="mb-4 rounded-lg transition-shadow hover:shadow-[0_4px_24px_0_rgba(25,170,255,0.25)] p-2"
+          >
+            <div className="font-semibold text-[#174366] text-base">{item.title}</div>
+            <div className="text-sm text-[#0d223a] text-justify">{item.detail}</div>
           </div>
         ))}
+        {/* Box shadow below text */}
+        <div className="absolute left-4 right-4 bottom-2 h-4 rounded-xl shadow-[0_8px_24px_0_rgba(25,170,255,0.18)] -z-10"></div>
       </div>
     </div>
   </section>
