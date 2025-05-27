@@ -18,7 +18,7 @@ const Conference = () => (
           />
         </div>
         <a
-          href="/wetwar.pdf"
+          href="https://drive.google.com/file/d/1wL1myXAEfi0hJYNNN-XT_ZvjNLgLlQt9/view?usp=sharing"
           download
           className="mt-6 inline-block bg-[#d97706] hover:bg-[#b45309] text-white font-bold px-6 py-3 rounded-lg shadow transition"
         >
