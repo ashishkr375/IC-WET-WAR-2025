@@ -97,17 +97,17 @@ export default function OrganizingCommitteePage() {
 			<div
 				className="min-h-screen py-8 pt-24"
 				style={{
-					background: "#19aaff",
+					background: "linear-gradient(135deg, #e3f2fd 0%, #b3e0fc 100%)",
 				}}
 			>
-				<div className="max-w-5xl mx-auto bg-white/10 rounded-2xl px-2 py-8 shadow-2xl border border-white/30">
-					<h1 className="text-4xl sm:text-5xl font-bold text-center text-white tracking-wider drop-shadow-[0_2px_12px_#38bdf8] mb-8 underline underline-offset-8">
+				<div className="max-w-5xl mx-auto bg-white/10 rounded-2xl px-2 py-8 shadow-2xl border border-black/20">
+					<h1 className="text-4xl sm:text-5xl font-bold text-center text-black tracking-wider drop-shadow-[0_2px_12px_#38bdf8] mb-8 underline underline-offset-8">
 						Organising Committee
 					</h1>
 					<div className="flex flex-wrap justify-center">
 						{people.map((person, idx) => (
 							<div key={idx} className="w-[290px] h-[340px] mx-3 my-4">
-								<div className="relative flex flex-col items-center bg-gradient-to-br from-[#38bdf8]/30 to-[#19aaff]/60 border border-white/30 rounded-2xl shadow-xl h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+								<div className="relative flex flex-col items-center bg-gradient-to-br from-[#e3f2fd]/60 to-[#b3e0fc]/80 border border-black/20 rounded-2xl shadow-xl h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
 									<div className="relative mt-6 mb-4 flex items-center justify-center">
 										{/* White circle border with sky blue on hover */}
 										<div className="absolute w-[110px] h-[110px] rounded-full border-4 border-white transition-all duration-300 group-hover:w-[130px] group-hover:h-[130px] group-hover:border-[#38bdf8] z-0"></div>
@@ -120,17 +120,17 @@ export default function OrganizingCommitteePage() {
 										/>
 									</div>
 									<div className="flex-1 flex flex-col items-center justify-center px-4">
-										<h3 className="text-lg text-white font-bold mb-1 drop-shadow">
+										<h3 className="text-lg text-black font-bold mb-1 drop-shadow">
 											{person.name}
 										</h3>
 										<h4 className="text-base text-white bg-[#1976d2] px-3 py-1 rounded-full font-semibold mb-1 shadow">
 											{person.role}
 										</h4>
-										<h4 className="text-[15px] text-white/80 capitalize">
+										<h4 className="text-[15px] text-black/80 capitalize">
 											{person.detail}
 										</h4>
 									</div>
-									<div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#38bdf8]/60 via-[#19aaff]/40 to-[#b3e0fc]/0 rounded-b-2xl"></div>
+									<div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#38bdf8]/60 via-[#b3e0fc]/40 to-[#e3f2fd]/0 rounded-b-2xl"></div>
 								</div>
 							</div>
 						))}

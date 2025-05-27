@@ -16,7 +16,7 @@ const navLinks = [
 const registrationFees = [
   { label: "Students", value: "Rs. 5000 / USD 100" },
   { label: "Faculties/Officers", value: "Rs. 9000 / USD 200" },
-  { label: "Spouse", value: "Rs. 4500 / USD 100" }
+  { label: "Accompanying person", value: "Rs. 5000 / USD 100" }
 ];
 
 const sponsors = [
@@ -89,80 +89,78 @@ export default function RegisterPage() {
       {/* Main Content */}
       <div
         style={{
-          background: "#b3e0fc",
-          color: "#0d223a",
+          background: "linear-gradient(135deg, #e3f2fd 0%, #b3e0fc 100%)",
+          color: "#111",
         }}
         className="relative min-h-screen w-full py-20 px-4"
       >
         <div
           style={{
-            background: "#b3e0fc",
-            border: "1.5px solidrgb(139, 208, 240)",
-            color: "#0d223a",
+            background: "rgba(255,255,255,0.10)",
+            border: "1.5px solid #38bdf8",
+            color: "#111",
           }}
-          className=" w-full mx-auto backdrop-blur-2xl rounded-3xl p-10"
+          className="w-full mx-auto backdrop-blur-2xl rounded-3xl p-10 border border-black/20"
         >
           {/* Header Section */}
           <section className="text-center mb-12 space-y-6">
             <h1
               style={{
-                color: "#0288d1",
-                textShadow: "2px 2px 0px #b3e0fc",
+                color: "#111",
+                textShadow: "0 2px 12px #38bdf8, 0 1px 0 #38bdf8, 0 0px 8px #38bdf8"
               }}
-              className="inline-block text-5xl font-extrabold"
+              className="inline-block text-5xl font-extrabold tracking-wider font-['Montserrat',_Bebas_Neue,_cursive] drop-shadow-[0_2px_12px_#38bdf8]"
             >
               WET-WAR 2025
             </h1>
-            <p className="text-sm font-medium" style={{ color: "#174366", textAlign: 'justify' }}>
-              Join us at <span style={{ color: "#0288d1", fontWeight: 600 }}>NIT Patna</span>
+            <p className="text-sm font-medium text-black/90 text-center">
+              Join us at <span style={{ color: "#38bdf8", fontWeight: 600 }}>NIT Patna</span>
               <span className="mx-1"></span>
-              <span className="italic" style={{ color: "#0277bd" }}>delicious food on the Bank of River Ganga</span>
+              <span className="italic" style={{ color: "#1976d2" }}>delicious food on the Bank of River Ganga</span>
             </p>
           </section>
-
           {/* Registration Fee Section */}
           <section className="mb-10">
             <h2
-              style={{ color: "#0288d1" }}
+              style={{ color: "#111" }}
               className="text-2xl font-semibold mb-6 flex items-center gap-2"
             >
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#0288d1" }}>
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#38bdf8" }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4" />
               </svg>
-              Registration Fee <span className="text-xs font-normal" style={{ color: "#174366" }}>(Free fooding + Inclusive GST (18%))</span>
+              Registration Fee <span className="text-xs font-normal" style={{ color: "#111" }}>(Free fooding [Breakfast, lunch and dinner] + Inclusive GST (18%))</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {registrationFees.map((fee, idx) => (
                 <div
                   key={idx}
                   style={{
-                    background: "rgba(90,200,250,0.18)",
-                    border: "1.5px solid #4fc3f7",
-                    color: "#0d223a",
+                    background: "rgba(56,189,248,0.18)",
+                    border: "1.5px solid #38bdf8",
+                    color: "#111",
                   }}
                   className="rounded-xl shadow-lg p-5 flex flex-col items-center justify-center transition-transform hover:scale-105"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#0288d1" }}>
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#38bdf8" }}>
                       <circle cx="12" cy="12" r="10" strokeOpacity="0.3" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l2 2" />
                     </svg>
-                    <span className="font-semibold text-lg" style={{ color: "#0277bd" }}>{fee.label}</span>
+                    <span className="font-semibold text-lg text-[#38bdf8]">{fee.label}</span>
                   </div>
-                  <div className="text-xl font-bold" style={{ color: "#174366" }}>{fee.value}</div>
+                  <div className="text-xl font-bold text-black">{fee.value}</div>
                 </div>
               ))}
             </div>
           </section>
-
           {/* Account and QR Section */}
           <section className="mb-12">
-            <h3 className="text-xl font-bold mb-4" style={{ color: "#0288d1" }}>Scan & Submit Paper</h3>
+            <h3 className="text-xl font-bold mb-4" style={{ color: "#111" }}>Scan & Submit Paper</h3>
             <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-              <div className="space-y-2" style={{ color: "#174366" }}>
+              <div className="space-y-2" style={{ color: "#111" }}>
                 {accountDetails.map((detail, idx) => (
                   <p key={idx}>
-                    <span className="font-semibold" style={{ color: "#0288d1" }}>{detail.label}:</span> {detail.value}
+                    <span className="font-semibold" style={{ color: "#38bdf8" }}>{detail.label}:</span> {detail.value}
                   </p>
                 ))}
               </div>
@@ -170,24 +168,23 @@ export default function RegisterPage() {
                 src="https://i.postimg.cc/jdxKPKGW/image.png"
                 alt="QR Code"
                 className="w-36 h-36 rounded-lg border"
-                style={{ borderColor: "#0288d1", boxShadow: "0 2px 12px #b3e0fc" }}
+                style={{ borderColor: "#38bdf8", boxShadow: "0 2px 12px #38bdf8" }}
               />
               {/* SCAN & REGISTER Note on right side */}
-              <div className="mt-0 md:mt-0 md:ml-4 bg-blue-50/80 border border-blue-200 rounded-xl p-4 shadow text-blue-900 min-w-[220px] max-w-xs">
-                <h4 className="text-lg font-bold mb-2 tracking-wide">SCAN & REGISTER</h4>
+              <div className="mt-0 md:mt-0 md:ml-4 bg-[#38bdf8]/10 border border-[#38bdf8] rounded-xl p-4 shadow text-black min-w-[220px] max-w-xs">
+                <h4 className="text-lg font-bold mb-2 tracking-wide text-[#38bdf8]">SCAN & REGISTER</h4>
                 <p className="text-sm font-medium">
                   <span className="font-semibold">Note:</span> Registration Fee payment transaction Number required and Upload payment PDF
                 </p>
               </div>
             </div>
           </section>
-
           {/* Conference Highlights */}
           <section className="mt-16">
             <h2
               className="text-3xl font-extrabold mb-8 text-center tracking-wide"
               style={{
-                color: "#fff",
+                color: "#111",
                 textShadow: "0 2px 12px #38bdf8, 0 1px 0 #38bdf8, 0 0px 8px #38bdf8"
               }}
             >
@@ -196,14 +193,14 @@ export default function RegisterPage() {
             <ul className="space-y-4">
               {paperInfoPoints.map((point, idx) => (
                 <li className="flex" key={idx}>
-                  <div className={`w-1 ${point.color} rounded-l-full`} />
+                  <div className={`w-1 bg-[#38bdf8] rounded-l-full`} />
                   <div
                     className="shadow-md px-4 py-2 rounded-r-xl flex-1"
                     style={{
-                      background:"#4682B4",
+                      background: "#e3f2fd",
                     }}
                   >
-                    <p className="text-sm md:text-base text-white">
+                    <p className="text-sm md:text-base text-black">
                       {point.text}
                     </p>
                   </div>

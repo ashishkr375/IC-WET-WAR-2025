@@ -172,18 +172,18 @@ export default function pagePage() {
       <div
         className="min-h-screen py-8 pt-24"
         style={{
-          background: "#19aaff"
+          background: "linear-gradient(135deg, #e3f2fd 0%, #b3e0fc 100%)"
         }}
       >
-        <div className="max-w-5xl mx-auto bg-white/10 rounded-2xl px-2 py-8 shadow-2xl border border-white/30">
-          <h1 className="text-4xl sm:text-5xl font-bold text-center text-white tracking-wider drop-shadow-[0_2px_12px_#38bdf8] mb-8 underline underline-offset-8">
+        <div className="max-w-5xl mx-auto bg-white/10 rounded-2xl px-2 py-8 shadow-2xl border border-black/20">
+          <h1 className="text-4xl sm:text-5xl font-bold text-center text-black tracking-wider drop-shadow-[0_2px_12px_#38bdf8] mb-8 underline underline-offset-8">
             Advisory Committee
           </h1>
-          <h2 className="text-2xl font-bold text-white text-center mb-4 mt-8 drop-shadow-[0_2px_8px_#38bdf8]">National</h2>
+          <h2 className="text-2xl font-bold text-black text-center mb-4 mt-8 drop-shadow-[0_2px_8px_#38bdf8]">National</h2>
           <div className="flex flex-wrap justify-center">
             {page.filter(m => m.type === "National").map((person, idx) => (
               <div key={idx} className="w-[200px] mx-2 my-3">
-                <div className="relative flex flex-col items-center bg-gradient-to-br from-[#38bdf8]/30 to-[#19aaff]/60 border border-white/30 rounded-2xl shadow-xl w-full h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group p-2">
+                <div className="relative flex flex-col items-center bg-gradient-to-br from-[#e3f2fd]/60 to-[#b3e0fc]/80 border border-black/20 rounded-2xl shadow-xl w-full h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group p-2">
                   <div className="relative mt-3 mb-2 flex items-center justify-center">
                     <div className="absolute w-[70px] h-[70px] rounded-full border-4 border-white transition-all duration-300 group-hover:w-[82px] group-hover:h-[82px] group-hover:border-[#38bdf8] z-0"></div>
                     <Image
@@ -195,19 +195,19 @@ export default function pagePage() {
                     />
                   </div>
                   <div className="flex-1 flex flex-col items-center justify-center px-2">
-                    <h3 className="text-base text-white font-bold mb-1 drop-shadow text-center">{person.name}</h3>
-                    <h4 className="text-[13px] text-white/80 capitalize text-center">{person.detail}</h4>
+                    <h3 className="text-base text-black font-bold mb-1 drop-shadow text-center">{person.name}</h3>
+                    <h4 className="text-[13px] text-black/80 capitalize text-center">{person.detail}</h4>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#38bdf8]/60 via-[#19aaff]/40 to-[#b3e0fc]/0 rounded-b-2xl"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#38bdf8]/60 via-[#b3e0fc]/40 to-[#e3f2fd]/0 rounded-b-2xl"></div>
                 </div>
               </div>
             ))}
           </div>
-          <h2 className="text-2xl font-bold text-white text-center mb-4 mt-8 drop-shadow-[0_2px_8px_#38bdf8]">International</h2>
+          <h2 className="text-2xl font-bold text-black text-center mb-4 mt-8 drop-shadow-[0_2px_8px_#38bdf8]">International</h2>
           <div className="flex flex-wrap justify-center">
             {page.filter(m => m.type === "International").map((person, idx) => (
               <div key={idx} className="w-[200px] mx-2 my-3">
-                <div className="relative flex flex-col items-center bg-gradient-to-br from-[#38bdf8]/30 to-[#19aaff]/60 border border-white/30 rounded-2xl shadow-xl w-full h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group p-2">
+                <div className="relative flex flex-col items-center bg-gradient-to-br from-[#e3f2fd]/60 to-[#b3e0fc]/80 border border-black/20 rounded-2xl shadow-xl w-full h-full transition-transform duration-300 hover:scale-105 hover:shadow-2xl group p-2">
                   <div className="relative mt-3 mb-2 flex items-center justify-center">
                     <div className="absolute w-[70px] h-[70px] rounded-full border-4 border-white transition-all duration-300 group-hover:w-[82px] group_hover:h-[82px] group-hover:border-[#38bdf8] z-0"></div>
                     <Image
@@ -219,10 +219,10 @@ export default function pagePage() {
                     />
                   </div>
                   <div className="flex-1 flex flex-col items-center justify-center px-2">
-                    <h3 className="text-base text-white font-bold mb-1 drop-shadow text-center">{person.name}</h3>
-                    <h4 className="text-[13px] text-white/80 capitalize text-center">{person.detail}</h4>
+                    <h3 className="text-base text-black font-bold mb-1 drop-shadow text-center">{person.name}</h3>
+                    <h4 className="text-[13px] text-black/80 capitalize text-center">{person.detail}</h4>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#38bdf8]/60 via-[#19aaff]/40 to-[#b3e0fc]/0 rounded-b-2xl"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#38bdf8]/60 via-[#b3e0fc]/40 to-[#e3f2fd]/0 rounded-b-2xl"></div>
                 </div>
               </div>
             ))}

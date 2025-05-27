@@ -2,14 +2,14 @@
 import React from "react";
 
 const Conference = () => (
-  <section className="relative z-10 min-h-[70vh] flex flex-col bg-[#19aaff] py-12 px-4 font-sans">
-    <h2 className="w-full text-3xl sm:text-4xl font-bold text-white mb-10 tracking-wider uppercase text-center z-30 drop-shadow-[0_2px_12px_#38bdf8]">
+  <section className="relative z-10 min-h-[70vh] flex flex-col bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] py-12 px-4 font-sans">
+    <h2 className="w-full text-3xl sm:text-4xl font-bold text-black mb-10 tracking-wider uppercase text-center z-30 drop-shadow-[0_2px_12px_#38bdf8]">
       About Conference
     </h2>
     <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full">
       {/* Left: Video */}
-      <div className="flex-1 max-w-xl w-full flex items-center justify-center mb-10 lg:mb-0 z-20">
-        <div className="w-full max-w-[420px] aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-white/20 flex items-center justify-center">
+      <div className="flex-1 max-w-xl w-full flex flex-col items-center justify-center mb-10 lg:mb-0 z-20">
+        <div className="w-full max-w-2xl aspect-video rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-white/20 flex items-center justify-center">
           <video
             src="/wetwar.mp4"
             controls
@@ -17,6 +17,13 @@ const Conference = () => (
             poster="/hero1.jpg"
           />
         </div>
+        <a
+          href="/wetwar.pdf"
+          download
+          className="mt-6 inline-block bg-[#d97706] hover:bg-[#b45309] text-white font-bold px-6 py-3 rounded-lg shadow transition"
+        >
+          Download Brochure
+        </a>
       </div>
       {/* Right: Map */}
       <div className="flex-1 max-w-xl w-full flex items-center justify-center z-20">

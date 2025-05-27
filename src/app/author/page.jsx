@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 const registrationFees = [
   { label: 'Students/Research scholars', value: 'Rs. 5000 / USD 100' },
   { label: 'Academician/Industry Professionals', value: 'Rs. 9000 / USD 200' },
-  { label: 'Accompanying person', value: 'Rs. 4500 / USD 100' }
+  { label: 'Accompanying person', value: 'Rs. 5000 / USD 100' }
 ];
 
 const sponsors = [
@@ -56,8 +56,8 @@ const Page = () => {
       <div
         className="relative w-screen min-h-screen shadow-xl overflow-x-hidden flex flex-col"
         style={{
-          background: "#19aaff",
-          color: "#0d223a",
+          background: "linear-gradient(135deg, #e3f2fd 0%, #b3e0fc 100%)",
+          color: "#111",
         }}
       >
         <Navbar/>
@@ -66,18 +66,18 @@ const Page = () => {
           className="w-screen mx-auto p-6 pt-28 shadow-xl flex-1 flex flex-col"
           style={{
             background: "rgba(255,255,255,0.10)",
-            color: "#0d223a",
+            color: "#111",
           }}
         >
           {/* Conference Introduction */}
           <section className="mb-10">
             <h1
-              className="text-4xl font-bold underline underline-offset-8 mb-4 text-center font-['Montserrat',_Bebas_Neue,_cursive] tracking-wider text-white drop-shadow-[0_2px_12px_#38bdf8]"
+              className="text-4xl font-bold underline underline-offset-8 mb-4 text-center font-['Montserrat',_Bebas_Neue,_cursive] tracking-wider text-black drop-shadow-[0_2px_12px_#38bdf8]"
             >
               International Conference WET-WAR 2025
             </h1>
             <p
-              className="text-base leading-7 font-serif text-white/90 text-justify"
+              className="text-base leading-7 font-serif text-black/90 text-justify"
             >
               Wetland ecosystems and water resources are among the most productive and biodiversity-rich environments on Earth. Organizing the first-ever conference on wetland ecosystems for sustainable development is a significant step in addressing both local and global environmental challenges such as habitat loss, climate change, and water scarcity. This conference will provide a unique platform for experts, policymakers, researchers, and local communities to come together and share knowledge, collaborate on conservation strategies, and develop solutions for safeguarding wetlands and water resources.
             </p>
@@ -89,19 +89,14 @@ const Page = () => {
               >
                 Abstract Submission
               </button>
-              <button
-                className="bg-[#43a047] hover:bg-green-900 font-bold px-7 py-3 rounded-lg shadow-lg transition text-lg cursor-pointer text-white drop-shadow"
-                onClick={() => window.open('#', '_blank')}
-              >
-                Paper Submission
-              </button>
+              {/* Removed Paper Submission button */}
             </div>
           </section>
 
           {/* Major Themes */}
           <section>
             <h2
-              className="text-3xl sm:text-4xl font-bold mb-4 text-center font-['Montserrat',_Bebas_Neue,_cursive] tracking-wider text-white drop-shadow-[0_2px_12px_#38bdf8]"
+              className="text-3xl sm:text-4xl font-bold mb-4 text-center font-['Montserrat',_Bebas_Neue,_cursive] tracking-wider text-black drop-shadow-[0_2px_12px_#38bdf8]"
             >
               Major Themes
             </h2>
@@ -109,22 +104,22 @@ const Page = () => {
               {majorThemes.map((theme, idx) => (
                 <div
                   key={idx}
-                  className={`relative rounded-lg shadow-sm flex items-center justify-center text-center h-36 w-full min-h-[180px] min-w-[180px] max-w-full font-serif border border-white/40 overflow-hidden cursor-pointer transition duration-200 hover:shadow-[0_0_16px_4px_#38bdf8,0_0_8px_2px_#0288d1] hover:scale-105`}
-                  style={{
-                    fontWeight: 700,
-                    fontSize: "1.18rem",
-                    letterSpacing: "0.5px",
-                  }}
+                  className="flex flex-col items-center justify-end w-full min-w-[180px] max-w-full"
+                  style={{ height: 260 }}
                 >
-                  <img
-                    src={`/theme${(idx % 10) + 1}.png`}
-                    alt={`Theme ${idx + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover z-0"
-                  />
-                  <div className="absolute inset-0 bg-black/80 z-10"></div>
-                  <span className="relative z-20 px-4 font-bold text-lg text-white drop-shadow-lg">
+                  <div
+                    className="relative rounded-t-lg shadow-sm w-full h-[150px] border border-black/20 overflow-hidden flex items-end"
+                  >
+                    <img
+                      src={`/theme${(idx % 10) + 1}.png`}
+                      alt={`Theme ${idx + 1}`}
+                      className="absolute inset-0 w-full h-full object-cover z-0"
+                    />
+                    <div className="absolute inset-0 bg-black/60 z-10"></div>
+                  </div>
+                  <div className="w-full bg-white/90 border-x border-b border-black/20 rounded-b-lg px-4 py-3 z-20 shadow text-black font-bold text-center text-base h-[70px] flex items-center justify-center">
                     {theme}
-                  </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -132,10 +127,10 @@ const Page = () => {
 
           {/* Important Dates */}
           <section
-            className="my-12 rounded-2xl shadow-xl p-4 sm:p-8 backdrop-blur-md overflow-x-auto bg-white/10 border border-white/30"
+            className="my-12 rounded-2xl shadow-xl p-4 sm:p-8 backdrop-blur-md overflow-x-auto bg-white/10 border border-black/20"
           >
             <h2
-              className="text-2xl sm:text-3xl font-extrabold inline-block mb-6 pb-2 tracking-wide font-['Montserrat',_Bebas_Neue,_cursive] text-white border-b-4 border-[#38bdf8]"
+              className="text-2xl sm:text-3xl font-extrabold inline-block mb-6 pb-2 tracking-wide font-['Montserrat',_Bebas_Neue,_cursive] text-black border-b-4 border-[#38bdf8]"
             >
               Important Dates
             </h2>
@@ -155,27 +150,25 @@ const Page = () => {
                         style={
                           item.highlight
                             ? {
-                                color: "#daf8a1", 
+                                color: "#43a047", // green
                                 fontWeight: 700,
-                               
                               }
-                            : { color: "#fff" }
+                            : { color: "#111" }
                         }
                       >
                         {item.label}
                       </td>
                       <td
                         className={`py-3 px-2 sm:px-4 text-right font-medium font-mono ${
-                          item.highlight ? "font-bold" : "text-white"
+                          item.highlight ? "font-bold" : "text-black"
                         }`}
                         style={
                           item.highlight
                             ? {
-                                color: "#daf8a1", // teal green
+                                color: "#43a047", // green
                                 fontWeight: 700,
-                                
                               }
-                            : {}
+                            : { color: "#111" }
                         }
                       >
                         {item.value}
@@ -205,13 +198,13 @@ const Page = () => {
                               WebkitBackgroundClip: "text",
                               color: "transparent",
                             }
-                          : { color: "#fff" }
+                          : { color: "#111" }
                       }
                     >
                       {item.label}
                     </span>
                     <span
-                      className="font-medium mt-1 font-mono text-white"
+                      className="font-medium mt-1 font-mono text-black"
                     >
                       {item.value}
                     </span>
@@ -223,26 +216,26 @@ const Page = () => {
 
           {/* Registration Fee Details */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-white font-['Montserrat',_Bebas_Neue,_cursive]">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-black font-['Montserrat',_Bebas_Neue,_cursive]">
               <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#38bdf8" }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4" />
               </svg>
-              Registration Fee <span className="text-xs font-normal text-white/80">(Free fooding + Inclusive GST (18%))</span>
+              Registration Fee <span className="text-xs font-normal text-black/80">(Free fooding + Inclusive GST (18%))</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {registrationFees.map((fee, idx) => (
                 <div
                   key={idx}
-                  className="rounded-xl shadow-lg p-5 flex flex-col items-center justify-center transition-transform hover:scale-105 bg-white/10 border border-white/30"
+                  className="rounded-xl shadow-lg p-5 flex flex-col items-center justify-center transition-transform hover:scale-105 bg-white/10 border border-black/20"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" style={{ color: "#38bdf8" }}>
                       <circle cx="12" cy="12" r="10" strokeOpacity="0.3" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l2 2" />
                     </svg>
-                    <span className="font-semibold text-lg text-white">{fee.label}</span>
+                    <span className="font-semibold text-lg text-black">{fee.label}</span>
                   </div>
-                  <div className="text-xl font-bold text-white">{fee.value}</div>
+                  <div className="text-xl font-bold text-black">{fee.value}</div>
                 </div>
               ))}
             </div>

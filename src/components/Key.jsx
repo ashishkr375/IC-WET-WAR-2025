@@ -33,9 +33,9 @@ export default function KeyObjectives() {
 	}, []);
 
 	return (
-		<section className="w-full py-20 px-4 sm:px-8 relative overflow-hidden bg-[#19aaff]">
+		<section className="w-full py-20 px-4 sm:px-8 relative overflow-hidden bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc]">
 			<div className="relative z-10">
-				<h2 className="text-center text-3xl sm:text-4xl font-extrabold tracking-wide text-white mb-14">
+				<h2 className="text-center text-3xl sm:text-4xl font-extrabold tracking-wide text-black mb-14">
 					KEY OBJECTIVES
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
@@ -44,10 +44,10 @@ export default function KeyObjectives() {
 							key={idx}
 							className="backdrop-blur-lg bg-white/10 border border-white shadow-xl rounded-2xl p-6 flex flex-col justify-between transition-transform hover:scale-105 hover:shadow-white/50 duration-300"
 						>
-							<h3 className="text-lg font-semibold text-white mb-4 text-center">
+							<h3 className="text-lg font-semibold text-black mb-4 text-center">
 								{obj.title}
 							</h3>
-							<p className="text-sm text-white leading-relaxed text-center">
+							<p className="text-sm text-black leading-relaxed text-center">
 								{obj.desc}
 							</p>
 						</div>

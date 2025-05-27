@@ -4,29 +4,34 @@ import React from 'react';
 
 const sponsorships = [
   {
+    tier: " Nominal Sponsor",
+    price: "₹10,000",
+    delegates: "1 delegate free",
+  },
+  {
     tier: "🥉 Bronze Sponsor",
-    price: "₹50,000",
-    delegates: "2 delegates",
+    price: "₹25,000",
+    delegates: "1 delegate free + standee for advertisement",
   },
   {
     tier: "🥈 Silver Sponsor",
-    price: "₹1,00,000",
-    delegates: "4 delegates",
+    price: "₹50,000",
+    delegates: "2 delegates free + 10*10 space",
   },
   {
     tier: "🥇 Gold Sponsor",
-    price: "₹2,00,000",
-    delegates: "8 delegates",
+    price: "₹1,00,000",
+    delegates: "4 delegates free + 15*15 space",
   },
   {
     tier: "💎 Diamond Sponsor",
-    price: "₹2,50,000+",
-    delegates: "10 delegates",
+    price: "₹2,00,000+",
+    delegates: "5 delegates free + 20*20 space",
   },
   {
     tier: "🏆 Title Sponsor",
     price: "₹5,00,000",
-    delegates: "15 delegates + exclusive title branding rights",
+    delegates: "10 delegates free + + 25*25 space",
   },
 ];
 
