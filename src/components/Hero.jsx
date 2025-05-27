@@ -52,7 +52,7 @@ const Hero = () => {
   return  (
     <>
       <Navbar />
-      <section className="relative bg-[#19aaff] text-white min-h-screen h-screen flex items-center overflow-hidden">
+      <section className="relative bg-[#1793d1] text-white min-h-screen h-screen flex items-center overflow-hidden">
         <RainParticles />
         <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 md:px-8 z-10 flex flex-col items-center">
           <div className="w-full flex justify-center">
