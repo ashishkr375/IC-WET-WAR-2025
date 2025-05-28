@@ -8,7 +8,7 @@ const people = [
   {
     name: "Prof. (Dr.) Ramakar Jha",
     detail: "CED, NIT Patna",
-    image: "https://www.nitp.ac.in/_next/image?url=https%3A%2F%2Fdrive.google.com%2Fthumbnail%3Fauthuser%3D0%26sz%3Dw320%26id%3D1YAYImlpH6LjznLRaKSJkOIrYR4nABMgz&w=384&q=75",
+    image: "https://i.postimg.cc/zBrHxh27/ramakar-sir.jpg",
   },
   {
     name: "Prof. (Dr.) Rommel Mehta",

@@ -20,7 +20,7 @@ const data = {
 
 const Notices = () => (
   <section className="w-full min-h-[80vh] flex flex-col items-center justify-center bg-[#19aaff] py-16 px-4">
-    <h2 className="text-white font-bold text-3xl sm:text-4xl mb-8 text-center tracking-widest uppercase drop-shadow-[0_2px_12px_#fff]">
+    <h2 className="text-black font-bold text-3xl sm:text-4xl mb-8 text-center tracking-widest uppercase drop-shadow-[0_2px_12px_#fff]">
       Notification
     </h2>
     <div className="flex flex-wrap gap-6 justify-center w-full max-w-screen-xl">

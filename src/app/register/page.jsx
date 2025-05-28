@@ -107,7 +107,7 @@ export default function RegisterPage() {
             <h1
               style={{
                 color: "#111",
-                textShadow: "0 2px 12px #38bdf8, 0 1px 0 #38bdf8, 0 0px 8px #38bdf8"
+                textShadow: "0 2px 2px #38bdf8, 0 1px 0 #38bdf8, 0 0px 2px #38bdf8"
               }}
               className="inline-block text-5xl font-extrabold tracking-wider font-['Montserrat',_Bebas_Neue,_cursive] drop-shadow-[0_2px_12px_#38bdf8]"
             >
@@ -172,7 +172,9 @@ export default function RegisterPage() {
               />
               {/* SCAN & REGISTER Note on right side */}
               <div className="mt-0 md:mt-0 md:ml-4 bg-[#38bdf8]/10 border border-[#38bdf8] rounded-xl p-4 shadow text-black min-w-[220px] max-w-xs">
-                <h4 className="text-lg font-bold mb-2 tracking-wide text-[#38bdf8]">SCAN & REGISTER</h4>
+                <h4 className="text-lg font-bold mb-2 tracking-wide" style={{ color: "#C2185B" /* magenta/deep red */ }}>
+                  SCAN & REGISTER
+                </h4>
                 <p className="text-sm font-medium">
                   <span className="font-semibold">Note:</span> Registration Fee payment transaction Number required and Upload payment PDF
                 </p>
@@ -185,7 +187,7 @@ export default function RegisterPage() {
               className="text-3xl font-extrabold mb-8 text-center tracking-wide"
               style={{
                 color: "#111",
-                textShadow: "0 2px 12px #38bdf8, 0 1px 0 #38bdf8, 0 0px 8px #38bdf8"
+                textShadow: "0 2px 2px #38bdf8, 0 1px 0 #38bdf8, 0 0px 2px #38bdf8"
               }}
             >
               Conference Highlights
