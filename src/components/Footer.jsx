@@ -151,11 +151,20 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-sky-400 sm:flex-row">
-          <p className="text-xs text-sky-50 text-center sm:text-left">
-            © {currentYear}{" "}
-            <span className="font-medium text-white">WET-WAR 2025, NIT Patna</span>
-            . All rights reserved.[Aman Mishra]
-          </p>
+          <div className="flex-1 flex flex-col items-center sm:items-start">
+            <p className="text-xs text-sky-50 text-center sm:text-left">
+              © {currentYear}{" "}
+              <span className="font-medium text-white">WET-WAR 2025, NIT Patna</span>
+              . All rights reserved.
+            </p>
+            <p className="text-[11px] text-sky-100 mt-2 max-w-xl text-center sm:text-left">
+              <strong>CMT Acknowledgment:</strong> The Microsoft CMT service was
+              used for managing the peer-reviewing process for this conference.
+              This service was provided for free by Microsoft and they bore all
+              expenses, including costs for Azure cloud services as well as for
+              software development and support.
+            </p>
+          </div>
           <div className="flex items-center mt-4 space-x-4 sm:mt-0 text-xl">
             <a
               href="#"
