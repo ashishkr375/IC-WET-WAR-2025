@@ -56,7 +56,7 @@ const Navbar = () => {
 							textStroke: "1px #38bdf8",
 						}}
 					>
-						WET-WAR
+						WET-WAR 2025
 					</span>
 				</div>
 
