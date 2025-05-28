@@ -20,6 +20,7 @@ const navLinks = [
 		dropdown: [
 			{ href: "/call-for-sponsor", label: "Call for Sponsor" },
 			{ href: "/sponsors", label: "Sponsors & Partners" },
+			{ href: "/key-note-speakers", label: "Keynote Speakers" },
 		],
 	},
 	{
