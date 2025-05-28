@@ -56,14 +56,14 @@ const people = [
 	},
 	{
 		role: "Secretary",
-		name: "Ar. (Dr.) Anushri Barman",
+		name: "Dr. Anushri Barman",
 		detail: "ARP, NIT Patna",
 		image:
 			"https://www.nitp.ac.in/_next/image?url=https%3A%2F%2Fdrive.google.com%2Fthumbnail%3Fauthuser%3D0%26sz%3Dw320%26id%3D16TEs6OgHH79BNm94VGG8sdLA2MvB4_Gd&w=384&q=75",
 	},
 	{
 		role: "Secretary",
-		name: "Ar. (Dr.) Ashutosh Kumar",
+		name: "Ar. Ashutosh Kumar",
 		detail: "ARP, BITM, Ranchi",
 		image: "https://i.postimg.cc/xjHqt0xt/image.png",
 	},

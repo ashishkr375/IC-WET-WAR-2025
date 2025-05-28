@@ -107,6 +107,14 @@ const Footer = () => {
                   Past Sponsors
                 </a>
               </li>
+              <li>
+                <a
+                  href="/key-note-speakers"
+                  className="transition-colors duration-300 text-sky-50 hover:text-white"
+                >
+                  Keynote Speakers
+                </a>
+              </li>
             </ul>
           </div>
           {/* Committee */}
