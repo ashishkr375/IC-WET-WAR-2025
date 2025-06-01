@@ -85,7 +85,7 @@ const Page = () => {
             <div className="flex flex-wrap justify-center gap-6 my-8">
               <button
                 className="bg-[#ff9800] hover:bg-orange-800 font-bold px-7 py-3 rounded-lg shadow-lg transition text-lg cursor-pointer text-white drop-shadow"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open('https://cmt3.research.microsoft.com/WETWAR2025', '_blank')}
               >
                 Abstract Submission
               </button>

@@ -107,7 +107,7 @@ export default function RegisterPage() {
             <h1
               style={{
                 color: "#111",
-                textShadow: "0 2px 2px #38bdf8, 0 1px 0 #38bdf8, 0 0px 2px #38bdf8"
+                textShadow: "0 2px 8px #fff"
               }}
               className="inline-block text-5xl font-extrabold tracking-wider font-['Montserrat',_Bebas_Neue,_cursive] drop-shadow-[0_2px_12px_#38bdf8]"
             >

@@ -15,18 +15,14 @@ const Footer = () => {
         <rect width="1440" height="40" fill="currentColor" />
       </svg>
       <div className="relative px-4 pt-12 mx-auto max-w-7xl md:px-12 lg:px-8">
-        <div className="grid gap-10 row-gap-8 mb-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 row-gap-8 mb-8 md:grid-cols-2 lg:grid-cols-6">
           {/* About */}
           <div className="flex flex-col lg:col-span-1.5 items-center lg:items-start">
-            <span className="text-2xl font-bold tracking-wide text-white uppercase mb-2 text-center lg:text-left block w-full">
-              WET-WAR 2025
+            <span className="text-2xl font-bold tracking-wide text-white uppercase mb-2 w-full text-center lg:text-left block">
+              WET-WAR
             </span>
-            <p className="text-sm text-sky-50 text-center">
-              WET-WAR 2025 is the first international conference focused on
-              wetland ecosystems for sustainable development. It aims to address
-              global challenges such as habitat loss and water scarcity by
-              fostering collaboration among researchers, experts, and
-              communities.
+            <p className="text-sm text-sky-50 w-full text-center lg:text-left">
+              WET-WAR 2025 is the first international conference focused on wetland ecosystems for sustainable development. It aims to address global challenges such as habitat loss and water scarcity by fostering collaboration among researchers, experts, and communities.
             </p>
           </div>
           {/* Call for Papers */}
@@ -107,6 +103,14 @@ const Footer = () => {
                   Past Sponsors
                 </a>
               </li>
+            </ul>
+          </div>
+          {/* Speakers */}
+          <div className="flex flex-col items-center md:items-start">
+            <p className="font-semibold tracking-wide text-sky-200 uppercase mb-2 text-center md:text-left">
+              Speakers
+            </p>
+            <ul className="mt-2 flex flex-col space-y-2 items-center md:items-start">
               <li>
                 <a
                   href="/key-note-speakers"
