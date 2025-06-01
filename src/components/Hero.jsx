@@ -64,30 +64,51 @@ const Hero = () => {
         <RainParticles />
         <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 md:px-8 z-10 flex flex-col items-center">
           <div className="w-full flex justify-center">
-            <h2 className={`text-base xs:text-lg sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] font-extrabold leading-tight mb-2 text-center whitespace-nowrap ${montserrat.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}
-                style={{ color: "#27548A", textShadow: "0 2px 12px #b3e0fc" }}>
+            <h2
+              className={`text-base xs:text-lg sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] font-extrabold leading-tight mb-2 text-center whitespace-nowrap ${montserrat.className} tracking-[0.12em]`}
+              style={{
+                color: "#27548A",
+                textShadow: "0 2px 12px #fff"
+              }}
+            >
               International Conference On
             </h2>
           </div>
-          <div className={`text-xs xs:text-base sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-0 text-center font-bold whitespace-nowrap ${poppins.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}
-            style={{ color: "#27548A", textShadow: "0 2px 8px #e3f2fd" }}>
+          <div
+            className={`text-xs xs:text-base sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-0 text-center font-bold whitespace-nowrap ${poppins.className} tracking-[0.12em]`}
+            style={{
+              color: "#27548A",
+              textShadow: "0 2px 8px #fff"
+            }}
+          >
             Wetland and Water Resource
           </div>
-          <div className={`text-xs xs:text-base sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-2 text-center font-bold whitespace-nowrap ${poppins.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}
-            style={{ color: "#27548A", textShadow: "0 2px 8px #b3e0fc" }}>
+          <div
+            className={`text-xs xs:text-base sm:text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] uppercase mb-2 text-center font-bold whitespace-nowrap ${poppins.className} tracking-[0.12em]`}
+            style={{
+              color: "#27548A",
+              textShadow: "0 2px 8px #fff"
+            }}
+          >
             For Sustainable Development
           </div>
           <div
-            className={`text-xs xs:text-base sm:text-lg md:text-2xl lg:text-3xl font-extrabold mb-2 text-center ${inter.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}
+            className={`text-xs xs:text-base sm:text-lg md:text-2xl lg:text-3xl font-extrabold mb-2 text-center ${inter.className} tracking-[0.12em]`}
             style={{
               color: "#000957",
               fontWeight: 900,
+              textShadow: "0 2px 12px #fff"
             }}
           >
             WET-WAR 2025 (International)
           </div>
-          <div className={`text-xs xs:text-base sm:text-lg font-bold mb-4 text-center ${inter.className} tracking-[0.12em] drop-shadow-[0_2px_16px_#38bdf8]`}
-            style={{ color: "#27548A" }}>
+          <div
+            className={`text-xs xs:text-base sm:text-lg font-bold mb-4 text-center ${inter.className} tracking-[0.12em]`}
+            style={{
+              color: "#27548A",
+              textShadow: "0 2px 8px #fff"
+            }}
+          >
             (29–31 December 2025)
           </div>
           {/* NIT Patna Logo and Name */}
@@ -99,8 +120,10 @@ const Hero = () => {
               height={120}
               className="rounded-[12px] shadow p-2 mb-2 w-[60px] h-[60px] xs:w-[80px] xs:h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px]"
             />
-            <span className={`font-bold text-lg xs:text-xl sm:text-2xl md:text-3xl rounded px-2 xs:px-3 py-1 bg-[rgba(255,255,255,0.12)] ${inter.className} tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]`}
-              style={{ color: "#27548A", whiteSpace: "nowrap" }}>
+            <span
+              className={`font-bold text-base xs:text-lg sm:text-2xl md:text-3xl rounded px-2 xs:px-3 py-1 bg-[rgba(255,255,255,0.12)] ${inter.className} tracking-[1px] drop-shadow-[0_2px_8px_#38bdf8]`}
+              style={{ color: "#27548A", whiteSpace: "nowrap" }}
+            >
               National Institute of Technology, Patna
             </span>
           </div>
