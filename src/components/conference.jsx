@@ -1,8 +1,60 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
+import { FiUpload } from "react-icons/fi";
+
+function TemplateDownload() {
+  const [show, setShow] = useState(false);
+
+  // Close the list when clicking outside
+  React.useEffect(() => {
+    if (!show) return;
+    const handle = (e) => {
+      if (!e.target.closest('.template-download-dropdown')) setShow(false);
+    };
+    document.addEventListener('mousedown', handle);
+    return () => document.removeEventListener('mousedown', handle);
+  }, [show]);
+
+  return (
+    <div className="relative template-download-dropdown">
+      <button
+        className="bg-sky-700 hover:bg-sky-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 transition"
+        onClick={() => setShow((v) => !v)}
+        type="button"
+      >
+        <FiUpload className="text-xl" />
+        Template Download
+      </button>
+      {show && (
+        <ul className="absolute left-1/2 -translate-x-1/2 mt-4 flex flex-col gap-2 z-50 min-w-[220px] bg-white border border-sky-400 rounded-lg shadow-lg py-2 px-0">
+          <li>
+            <a
+              href="/WETWAR 2025_abstract_template.docx"
+              download
+              className="flex items-center gap-3 px-6 py-3 hover:bg-sky-50 transition text-sky-700 font-semibold"
+            >
+              <FiUpload className="text-xl" />
+              Abstract Template
+            </a>
+          </li>
+          <li>
+            <a
+              href="/WET-WAR 2025 -Full Paper Template File.docx"
+              download
+              className="flex items-center gap-3 px-6 py-3 hover:bg-sky-50 transition text-sky-700 font-semibold"
+            >
+              <FiUpload className="text-xl" />
+              Full Paper Template
+            </a>
+          </li>
+        </ul>
+      )}
+    </div>
+  );
+}
 
 const Conference = () => (
-  <section className="relative z-10 min-h-[70vh] flex flex-col bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] py-12 px-4 font-sans">
+  <section className="relative z-10 min-h-[70vh] flex flex-col bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] py-12 px-4 font-sans mb-14">
     <h2 className="w-full text-3xl sm:text-4xl font-bold text-black mb-10 tracking-wider uppercase text-center z-30 drop-shadow-[0_2px_12px_#38bdf8]">
       About Conference
     </h2>
@@ -17,13 +69,17 @@ const Conference = () => (
             poster="/hero1.jpg"
           />
         </div>
-        <a
-          href="https://drive.google.com/file/d/1wL1myXAEfi0hJYNNN-XT_ZvjNLgLlQt9/view?usp=sharing"
-          download
-          className="mt-6 inline-block bg-[#d97706] hover:bg-[#b45309] text-white font-bold px-6 py-3 rounded-lg shadow transition"
-        >
-          Download Brochure
-        </a>
+        <div className="flex flex-row flex-wrap gap-4 mt-6 justify-center items-center w-full">
+          <a
+            href="https://drive.google.com/file/d/1wL1myXAEfi0hJYNNN-XT_ZvjNLgLlQt9/view?usp=sharing"
+            download
+            className="bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-700 hover:to-yellow-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out flex items-center justify-center h-[52px] min-h-[52px]"
+            style={{ lineHeight: "1.2" }}
+          >
+            📥&nbsp;Download Brochure
+          </a>
+          <TemplateDownload />
+        </div>
       </div>
       {/* Right: Map */}
       <div className="flex-1 max-w-xl w-full flex items-center justify-center z-20">

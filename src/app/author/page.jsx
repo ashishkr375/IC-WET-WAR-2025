@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { FiUpload } from "react-icons/fi";
 
 const registrationFees = [
   { label: 'Students/Research scholars', value: 'Rs. 5000 / USD 100' },
@@ -48,6 +49,58 @@ const navLinks = [
   { href: '/contact-us', label: 'Contact Us' },
 ];
 
+function TemplateDownload() {
+  const [show, setShow] = useState(false);
+
+  // Close the list when clicking outside
+  React.useEffect(() => {
+    if (!show) return;
+    const handle = (e) => {
+      // Only close if click is outside the button/list
+      if (!e.target.closest('.template-download-dropdown')) setShow(false);
+    };
+    document.addEventListener('mousedown', handle);
+    return () => document.removeEventListener('mousedown', handle);
+  }, [show]);
+
+  return (
+    <div className="relative template-download-dropdown">
+      <button
+        className="bg-sky-700 hover:bg-sky-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 transition"
+        onClick={() => setShow((v) => !v)}
+        type="button"
+      >
+        <FiUpload className="text-xl" />
+        Template Download
+      </button>
+      {show && (
+        <ul className="absolute left-1/2 -translate-x-1/2 mt-4 flex flex-col gap-2 z-50 min-w-[220px] bg-white border border-sky-400 rounded-lg shadow-lg py-2 px-0">
+          <li>
+            <a
+              href="/WETWAR 2025_abstract_template.docx"
+              download
+              className="flex items-center gap-3 px-6 py-3 hover:bg-sky-50 transition text-sky-700 font-semibold"
+            >
+              <FiUpload className="text-xl" />
+              Abstract Template
+            </a>
+          </li>
+          <li>
+            <a
+              href="/WET-WAR 2025 -Full Paper Template File.docx"
+              download
+              className="flex items-center gap-3 px-6 py-3 hover:bg-sky-50 transition text-sky-700 font-semibold"
+            >
+              <FiUpload className="text-xl" />
+              Full Paper Template
+            </a>
+          </li>
+        </ul>
+      )}
+    </div>
+  );
+}
+
 const Page = () => {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -71,11 +124,10 @@ const Page = () => {
         >
           {/* Conference Introduction */}
           <section className="mb-10">
-            <h1
-              className="text-4xl font-bold underline underline-offset-8 mb-4 text-center font-['Montserrat',_Bebas_Neue,_cursive] tracking-wider text-black drop-shadow-[0_2px_12px_#38bdf8]"
-            >
+            <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-sky-700 via-sky-600 to-sky-800 text-transparent bg-clip-text tracking-wide mt-2 mb-2">
               International Conference WET-WAR 2025
             </h1>
+
             <p
               className="text-base leading-7 font-serif text-black/90 text-justify"
             >
@@ -90,6 +142,8 @@ const Page = () => {
                 Abstract Submission
               </button>
               {/* Removed Paper Submission button */}
+              {/* Template Download Button */}
+              <TemplateDownload />
             </div>
           </section>
 
