@@ -50,7 +50,22 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'spa.ac.in',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'www.jagranimages.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'brsa.org.in',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cwrdm.kerala.gov.in',
         pathname: '/**',
       },
     ],

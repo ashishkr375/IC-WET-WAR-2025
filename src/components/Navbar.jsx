@@ -15,14 +15,15 @@ const navLinks = [
 		],
 	},
 	{ href: "/register", label: "Registration" },
+	{ href: "/publications", label: "Publications" },
 	{
 		label: "Sponsors",
 		dropdown: [
 			{ href: "/call-for-sponsor", label: "Call for Sponsor" },
 			{ href: "/sponsors", label: "Sponsors & Partners" },
-			{ href: "/key-note-speakers", label: "Keynote Speakers" },
 		],
 	},
+	{ href: "/key-note-speakers", label: "Keynote Speakers" },
 	{
 		label: "Reach Us",
 		dropdown: [
@@ -60,14 +61,14 @@ const Navbar = () => {
 					</span>
 				</div>
 
-				<ul className="hidden md:flex space-x-4 sm:space-x-8 font-medium items-stretch h-[44px]">
+				<ul className="hidden md:flex space-x-2 sm:space-x-4 font-medium items-stretch h-[38px]">
 					{navLinks.map((link) =>
 						link.dropdown ? (
 							<li key={link.label} className="relative flex items-stretch">
 								<button
 									type="button"
-									className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 transition-all cursor-pointer"
-									style={{ minWidth: "90px", textAlign: "center" }}
+									className="relative flex items-center h-full px-2 py-1 rounded-md bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 transition-all cursor-pointer text-sm"
+									style={{ minWidth: "70px", textAlign: "center" }}
 									onClick={() =>
 										setOpenDropdown(openDropdown === link.label ? null : link.label)
 									}
@@ -75,7 +76,7 @@ const Navbar = () => {
 								>
 									{link.label}
 									<svg
-										className={`ml-2 w-4 h-4 transition-transform duration-200 ${
+										className={`ml-1 w-3 h-3 transition-transform duration-200 ${
 											openDropdown === link.label ? "rotate-180" : ""
 										}`}
 										fill="none"
@@ -92,14 +93,14 @@ const Navbar = () => {
 								</button>
 								{openDropdown === link.label && (
 									<ul
-										className="absolute left-0 mt-0 w-56 rounded-lg shadow-lg border border-[#b3e0fc] z-50"
+										className="absolute left-0 mt-0 w-44 rounded-md shadow-lg border border-[#b3e0fc] z-50"
 										style={{ top: "100%", background: "#e3f2fd" }}
 									>
 										{link.dropdown.map((item) => (
 											<li key={item.href}>
 												<Link
 													href={item.href}
-													className="block px-4 py-2 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition cursor-pointer"
+													className="block px-3 py-1 text-[#1976d2] hover:bg-[#bbdefb] hover:text-[#0a192f] rounded transition cursor-pointer text-sm"
 													onMouseDown={(e) => e.preventDefault()}
 													onClick={() => setOpenDropdown(null)}
 												>
@@ -114,8 +115,8 @@ const Navbar = () => {
 							<li key={link.href} className="flex items-stretch">
 								<Link
 									href={link.href}
-									className="relative flex items-center h-full px-4 py-2 rounded-lg bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 transition-all after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left cursor-pointer"
-									style={{ minWidth: "90px", textAlign: "center" }}
+									className="relative flex items-center h-full px-2 py-1 rounded-md bg-gradient-to-br from-[#64b5f6]/80 to-[#1976d2]/80 text-white font-semibold shadow hover:from-[#1976d2]/90 hover:to-[#64b5f6]/90 transition-all after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4fc3f7] after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left cursor-pointer text-sm"
+									style={{ minWidth: "70px", textAlign: "center" }}
 								>
 									{link.label}
 								</Link>
