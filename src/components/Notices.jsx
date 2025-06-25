@@ -7,8 +7,8 @@ const data = {
     { title: 'Travel Grants', detail: 'Limited travel grants available for students.' }
   ],
   importantDates: [
-    { title: 'Abstract Submission', detail: '15 September 2025' },
-    { title: 'Notification of Acceptance', detail: '30 September 2025' },
+    { title: 'Abstract Submission', detail: '15 July 2025' },
+    { title: 'Notification of Acceptance', detail: '30 July 2025' },
     { title: 'Registration Deadline', detail: '15 October 2025' }
   ],
   conference: [
