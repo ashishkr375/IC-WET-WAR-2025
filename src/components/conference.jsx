@@ -71,7 +71,7 @@ const Conference = () => (
         </div>
         <div className="flex flex-row flex-wrap gap-4 mt-6 justify-center items-center w-full">
           <a
-            href="https://drive.google.com/file/d/1wL1myXAEfi0hJYNNN-XT_ZvjNLgLlQt9/view?usp=sharing"
+            href="https://drive.google.com/file/d/1QRjOTFPcrxPsI0V5VX2viTHvXiJc0zQJ/view?usp=sharing"
             download
             className="bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-700 hover:to-yellow-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out flex items-center justify-center h-[52px] min-h-[52px]"
             style={{ lineHeight: "1.2" }}
