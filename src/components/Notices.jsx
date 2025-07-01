@@ -7,9 +7,19 @@ const data = {
     { title: 'Travel Grants', detail: 'Limited travel grants available for students.' }
   ],
   importantDates: [
-    { title: 'Abstract Submission', detail: '15 July 2025' },
-    { title: 'Notification of Acceptance', detail: '30 July 2025' },
-    { title: 'Registration Deadline', detail: '15 October 2025' }
+    { 
+      title: 'Abstract Submission', 
+      detail: (
+        <span>
+          <span style={{ textDecoration: 'line-through' }}>30<sup>th</sup> June 2025</span>
+          <span className="bg-orange-500 text-white px-2 py-1 rounded-full ml-2 text-sm font-bold">
+            15th July 2025
+          </span>
+        </span>
+      )
+    },
+    { title: 'Abstract Acceptance', detail: '30th July 2025' },
+    { title: 'Registration Starts', detail: '15 October 2025' }
   ],
   conference: [
     { title: 'Venue', detail: 'NIT Patna, India' },
@@ -58,7 +68,7 @@ const Notices = () => (
             className="mb-4 rounded-lg transition-shadow hover:shadow-[0_4px_24px_0_rgba(25,170,255,0.25)] p-2"
           >
             <div className="font-semibold text-[#174366] text-base">{item.title}</div>
-            <div className="text-sm text-[#0d223a] text-justify">{item.detail}</div>
+            <div className="text-sm text-[#0d223a] text-justify">{typeof item.detail === 'string' ? item.detail : item.detail}</div>
           </div>
         ))}
         {/* Box shadow below text */}
