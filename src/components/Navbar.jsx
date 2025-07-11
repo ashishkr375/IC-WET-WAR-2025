@@ -12,6 +12,7 @@ const navLinks = [
 			{ href: "/organizing-committee", label: "Organizing Committee" },
 			{ href: "/advisory-committee", label: "Advisory Committee" },
 			{ href: "/scientific-committee", label: "Scientific Committee" },
+			{ href: "/Resource-person-list", label: "Resource Person List" },
 		],
 	},
 	{ href: "/register", label: "Registration" },
