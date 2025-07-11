@@ -21,6 +21,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'scholar.googleusercontent.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
@@ -67,6 +68,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cwrdm.kerala.gov.in',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'iitg.ac.in',
+        pathname: '/aiwc/sites/default/files/file_upload/**',
       },
     ],
   },
