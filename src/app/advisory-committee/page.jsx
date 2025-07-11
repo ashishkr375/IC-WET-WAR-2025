@@ -90,18 +90,7 @@ const page = [
     type: "National",
     image: "https://up.yimg.com/ib/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&rs=1&c=1&qlt=95&w=120&h=120"
   },
-  {
-    name: "Dr. R. R. Sahay",
-    detail: "Prof., CED, BIT Mesra",
-    type: "National",
-    image: "https://tse3.mm.bing.net/th?id=OIP.prnIxqVmds15IbOjjw3b-gAAAA&pid=Api&P=0&h=180"
-  },
-  {
-    name: "Dr. Kirti Abhishek",
-    detail: "Assoc. Prof., CED, BIT Mesra",
-    type: "National",
-    image: "https://www.jagranimages.com/images/newimg/articleimages/Dr_%20Kirti%20Abhishek,%20Associate%20Professor,%20Civil%20and%20Environmental%20Engineering.jpg"
-  },
+
   {
     name: "Dr. Y. R. S. Rao",
     detail: "Scientist-G, NIH Roorkee",
