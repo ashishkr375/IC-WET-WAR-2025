@@ -1,29 +1,14 @@
 "use client"
-import React, { useState } from 'react';
-
-const images = [
-  "https://i.postimg.cc/0jDVqSGQ/Image-1-00001.jpg",
-  "https://i.postimg.cc/fyY06783/nit-patna-005.jpg",
-  "https://www.nitp.ac.in/homepage/MainEntrance.jpg",
-  "https://i.postimg.cc/HLP55kJL/nit-patna-006.jpg",
-];
+import React, { useRef, useEffect } from 'react';
 
 const About = () => {
-  const [current, setCurrent] = useState(0);
+  const videoRef = useRef(null);
 
-  // Custom auto-slide timing
-  React.useEffect(() => {
-    let timeout;
-    if (current === 0) {
-      timeout = setTimeout(() => setCurrent(1), 10000); // 10 seconds for first image
-    } else {
-      timeout = setTimeout(() => setCurrent((prev) => (prev + 1) % images.length), 3000); // 3 seconds for others
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
     }
-    return () => clearTimeout(timeout);
-  }, [current]);
-
-  const prevSlide = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const nextSlide = () => setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  }, []);
 
   return (
     <section className="min-h-[80vh] flex flex-col bg-gradient-to-br from-[#e3f2fd] to-[#b3e0fc] py-10 px-4 font-sans">
@@ -76,28 +61,15 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* Right: Image hero */}
+        {/* Right: Single Video */}
         <div className="flex-1 min-w-[220px] max-w-xl flex items-center justify-center">
           <div className="relative w-full max-w-2xl aspect-[16/10] rounded-2xl overflow-hidden shadow-lg border-2 border-white/30 bg-white/10 flex items-center justify-center" style={{ minHeight: "340px" }}>
-            <button
-              onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 text-[#38bdf8] rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-[#38bdf8] hover:text-white transition text-2xl"
-              aria-label="Previous"
-            >
-              &#8592;
-            </button>
-            <img
-              src={images[current]}
-              alt={`About hero ${current + 1}`}
+            <video
+              ref={videoRef}
+              src="WETWAR_vid.mp4"
+              controls
               className="w-full h-[340px] object-cover rounded-2xl"
             />
-            <button
-              onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 text-[#38bdf8] rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-[#38bdf8] hover:text-white transition text-2xl"
-              aria-label="Next"
-            >
-              &#8594;
-            </button>
           </div>
         </div>
       </div>
