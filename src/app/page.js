@@ -5,6 +5,7 @@ import Notices from "@/components/Notices";
 import Footer from "@/components/Footer";
 import Key from "../components/Key"
 import Conference from "@/components/conference";
+import Media from "@/components/media";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
    <Conference/>
    <Key/>
    <Notices/>
+   <Media/>
    <Footer/>
+
    </>
   );
 }
