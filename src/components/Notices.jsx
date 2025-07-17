@@ -2,8 +2,8 @@ import React from 'react';
 
 const data = {
   notices: [
+    { title: 'Call for Papers', detail: 'ON REQUEST OF MANY FACULTIES AND OFFICERS, WE ARE EXTENDING THE DATE OF ABSTRACT SUBMISSION. THE DATE OF SUBMISSION OF A BSTRACT IS 30.07.2025' },
     { title: 'Website Launched', detail: 'Conference website is live now.' },
-    { title: 'Call for Papers', detail: 'Submit your research papers by the deadline.' },
     { title: 'Travel Grants', detail: 'Limited travel grants available for students.' }
   ],
   importantDates: [
@@ -13,7 +13,7 @@ const data = {
         <span>
           <span style={{ textDecoration: 'line-through' }}>30<sup>th</sup> June 2025</span>
           <span className="bg-orange-500 text-white px-2 py-1 rounded-full ml-2 text-sm font-bold">
-            15th July 2025
+            30th July 2025
           </span>
         </span>
       )
