@@ -31,10 +31,10 @@ const majorThemes = [
 ];
 
 const importantDates = [
-  { label: 'Abstract submission:', value: '15th July 2025' },
+  { label: 'Abstract submission:', value: '30th July 2025' },
   { label: 'Abstract acceptance:', value: '30th July 2025' },
   { label: 'Full length paper:', value: '30th August 2025' },
-  { label: 'Acceptance/Rejection:', value: '15th September 2025' },
+  { label: 'Acceptance/Rejection:', value: '25th September 2025' },
   { label: 'Final submission:', value: '30th September 2025' },
   { label: 'Early Birds Registration [Avails 10% discount]:', value: '15th October, 2025', highlight: true },
   { label: 'Registration(Full register):', value: '15th November 2025' }
