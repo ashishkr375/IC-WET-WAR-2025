@@ -2,8 +2,12 @@ import React from 'react';
 
 const data = {
   notices: [
+    { 
+      title: 'Registrations Open', 
+      detail: 'REGISTRATION FOR THE CONFERENCE IS NOW OPEN! REGISTER NOW TO SECURE YOUR SPOT.',
+      highlighted: true
+    },
     { title: 'Call for Papers', detail: 'ON REQUEST OF MANY FACULTIES AND OFFICERS, WE ARE EXTENDING THE DATE OF ABSTRACT SUBMISSION. THE DATE OF SUBMISSION OF A BSTRACT IS 30.07.2025' },
-    { title: 'Website Launched', detail: 'Conference website is live now.' },
     { title: 'Travel Grants', detail: 'Limited travel grants available for students.' }
   ],
   importantDates: [
@@ -44,10 +48,16 @@ const Notices = () => (
         {data.notices.map((item, idx) => (
           <div
             key={idx}
-            className="mb-4 rounded-lg transition-shadow hover:shadow-[0_4px_24px_0_rgba(25,170,255,0.25)] p-2"
+            className={`mb-4 rounded-lg transition-shadow hover:shadow-[0_4px_24px_0_rgba(25,170,255,0.25)] p-2 ${
+              item.highlighted ? 'bg-yellow-100 border-2 border-yellow-400 animate-pulse' : ''
+            }`}
           >
-            <div className="font-semibold text-[#174366] text-base">{item.title}</div>
-            <div className="text-sm text-[#0d223a] text-justify">{item.detail}</div>
+            <div className={`font-semibold text-base ${
+              item.highlighted ? 'text-red-600' : 'text-[#174366]'
+            }`}>{item.title}</div>
+            <div className={`text-sm text-justify ${
+              item.highlighted ? 'text-red-700 font-medium' : 'text-[#0d223a]'
+            }`}>{item.detail}</div>
           </div>
         ))}
         {/* Box shadow below text */}
