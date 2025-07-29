@@ -23,7 +23,7 @@ const data = {
       )
     },
     { title: 'Abstract Acceptance', detail: '30th July 2025' },
-    { title: 'Registration Starts', detail: '15 October 2025' }
+    { title: 'Registration Starts', detail: '25th july 2025' }
   ],
   conference: [
     { title: 'Venue', detail: 'NIT Patna, India' },
