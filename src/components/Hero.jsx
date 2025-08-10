@@ -166,6 +166,41 @@ const Hero = () => {
         </div>
         <div className="waves bg-gradient-to-br from-[#2f4fff] to-[#4973ff]"></div>
       </section>
+      
+      {/* Registration Section Below Hero */}
+      <section className="w-full bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6">
+          {/* Full Paper Submission Deadline Button */}
+          <div className="relative group flex-shrink-0">
+            <a 
+              href="/author"
+              className={`inline-block bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${montserrat.className} tracking-wide cursor-pointer`}
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-base sm:text-lg">📄 SUBMIT PAPER</span>
+              </div>
+              <div className="text-xs opacity-90 mt-1 text-center">
+                Deadline: 30th August 2025
+              </div>
+            </a>
+          </div>
+          
+          {/* Registration Button */}
+          <div className="relative group flex-shrink-0">
+            <a 
+              href="/register"
+              className={`inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white font-bold py-4 px-10 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${montserrat.className} tracking-wide cursor-pointer`}
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-lg sm:text-xl">🎫 REGISTER NOW</span>
+              </div>
+              <div className="text-sm opacity-90 mt-1 text-center">
+                Join the Conference Today!
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Scoped styles for the wave */}
       <style jsx>{`
   .waves {
