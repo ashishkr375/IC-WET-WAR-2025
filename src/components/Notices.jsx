@@ -8,7 +8,7 @@ const data = {
       highlighted: true
     },
     { title: 'Call for Papers', detail: 'ON REQUEST OF MANY FACULTIES AND OFFICERS, WE ARE EXTENDING THE DATE OF ABSTRACT SUBMISSION. THE DATE OF SUBMISSION OF A BSTRACT IS 30.07.2025' },
-    { title: 'Travel Grants', detail: 'Limited travel grants available for students.' }
+    
   ],
   importantDates: [
     { 
@@ -17,12 +17,12 @@ const data = {
         <span>
           <span style={{ textDecoration: 'line-through' }}>30<sup>th</sup> June 2025</span>
           <span className="bg-orange-500 text-white px-2 py-1 rounded-full ml-2 text-sm font-bold">
-            30th July 2025
+            30th August 2025
           </span>
         </span>
       )
     },
-    { title: 'Abstract Acceptance', detail: '30th July 2025' },
+    { title: 'Abstract Acceptance', detail: '30th August 2025' },
     { title: 'Registration Starts', detail: '25th july 2025' }
   ],
   conference: [
