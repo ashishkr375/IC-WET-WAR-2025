@@ -36,8 +36,7 @@ const importantDates = [
   { label: 'Full length paper:', value: '30th August 2025' },
   { label: 'Acceptance/Rejection:', value: '25th September 2025' },
   { label: 'Final submission:', value: '30th September 2025' },
-  { label: 'Early Birds Registration [Avails 10% discount]:', value: '25th july, 2025', highlight: true },
-  { label: 'Registration(Full register):', value: '15th November 2025' }
+
 ];
 
 const navLinks = [
